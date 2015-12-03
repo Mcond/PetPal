@@ -20,5 +20,9 @@
 @property (nonatomic, retain) NSNumber * remainingCalories;
 @property (nonatomic, retain) NSNumber * targetCalories;
 @property (nonatomic, retain) NSNumber * weight;
+@property (nonatomic) BOOL neutered;
+@property (nonatomic) BOOL needToLooseWeight;
+@property (nonatomic) BOOL obeseProne;
+
 
 @end

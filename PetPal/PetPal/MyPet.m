@@ -19,6 +19,10 @@
 @dynamic remainingCalories;
 @dynamic targetCalories;
 @dynamic weight;
+@dynamic neutered;
+@dynamic needToLooseWeight;
+@dynamic obeseProne;
+
 
 //initialize the date updated to the date object is created
 //consumedCalories & remaining calories are set to 0
