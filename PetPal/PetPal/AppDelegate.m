@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "FoodDataViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse enableLocalDatastore];
+    // Initialize Parse.
+    [Parse setApplicationId:@"6OFjTNn1OCYjdA71AW30BSVqlKO4b6jIS1gYOfDm"
+                  clientKey:@"5Irf5kLVSodGvfrDdqGSTLHWnrnXNiE2NB7ym5tf"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    FoodDataViewController *foodDataVC = [[FoodDataViewController alloc] init];
+    self.window.rootViewController = foodDataVC;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED7A1551C11ECD50088E6E7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1531C11ECD50088E6E7 /* Bolts.framework */; };
+		0ED7A1561C11ECD50088E6E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1541C11ECD50088E6E7 /* Parse.framework */; };
+		0ED7A1581C11ED430088E6E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1571C11ED430088E6E7 /* AudioToolbox.framework */; };
+		0ED7A15A1C11ED5D0088E6E7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1591C11ED5D0088E6E7 /* CFNetwork.framework */; };
+		0ED7A15C1C11ED6B0088E6E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A15B1C11ED6B0088E6E7 /* CoreGraphics.framework */; };
+		0ED7A15E1C11ED780088E6E7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A15D1C11ED780088E6E7 /* CoreLocation.framework */; };
+		0ED7A1601C11ED920088E6E7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A15F1C11ED920088E6E7 /* QuartzCore.framework */; };
+		0ED7A1621C11EDA10088E6E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1611C11EDA10088E6E7 /* Security.framework */; };
+		0ED7A1641C11F1560088E6E7 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1631C11F1560088E6E7 /* SpriteKit.framework */; };
+		0ED7A1661C11F1630088E6E7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1651C11F1630088E6E7 /* SystemConfiguration.framework */; };
+		0ED7A1681C11F1960088E6E7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1671C11F1960088E6E7 /* libsqlite3.dylib */; };
+		0ED7A16A1C11F1AE0088E6E7 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1691C11F1AE0088E6E7 /* libz.dylib */; };
+		0ED7A16C1C11F1DA0088E6E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A16B1C11F1DA0088E6E7 /* Accounts.framework */; };
+		0ED7A16E1C11F1EB0088E6E7 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A16D1C11F1EB0088E6E7 /* Social.framework */; };
+		0ED7A1761C11FC7C0088E6E7 /* FoodDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1701C11FC7C0088E6E7 /* FoodDataViewController.m */; };
+		0ED7A1771C11FC7C0088E6E7 /* FoodDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */; };
+		0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1731C11FC7C0088E6E7 /* FoodList.m */; };
+		0ED7A1791C11FC7C0088E6E7 /* FoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1751C11FC7C0088E6E7 /* FoodType.m */; };
+		0ED7A17C1C11FC980088E6E7 /* MyFoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A17B1C11FC980088E6E7 /* MyFoodList.m */; };
 		DB62D2661C0EA48400C1A847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2651C0EA48400C1A847 /* main.m */; };
 		DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2681C0EA48400C1A847 /* AppDelegate.m */; };
 		DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB62D26A1C0EA48400C1A847 /* PetPal.xcdatamodeld */; };
@@ -30,6 +49,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ED7A1531C11ECD50088E6E7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0ED7A1541C11ECD50088E6E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		0ED7A1571C11ED430088E6E7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		0ED7A1591C11ED5D0088E6E7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0ED7A15B1C11ED6B0088E6E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0ED7A15D1C11ED780088E6E7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0ED7A15F1C11ED920088E6E7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		0ED7A1611C11EDA10088E6E7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0ED7A1631C11F1560088E6E7 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		0ED7A1651C11F1630088E6E7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		0ED7A1671C11F1960088E6E7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0ED7A1691C11F1AE0088E6E7 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		0ED7A16B1C11F1DA0088E6E7 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		0ED7A16D1C11F1EB0088E6E7 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0ED7A16F1C11FC7C0088E6E7 /* FoodDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodDataViewController.h; sourceTree = "<group>"; };
+		0ED7A1701C11FC7C0088E6E7 /* FoodDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodDataViewController.m; sourceTree = "<group>"; };
+		0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDataViewController.xib; sourceTree = "<group>"; };
+		0ED7A1721C11FC7C0088E6E7 /* FoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodList.h; sourceTree = "<group>"; };
+		0ED7A1731C11FC7C0088E6E7 /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodList.m; sourceTree = "<group>"; };
+		0ED7A1741C11FC7C0088E6E7 /* FoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodType.h; sourceTree = "<group>"; };
+		0ED7A1751C11FC7C0088E6E7 /* FoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodType.m; sourceTree = "<group>"; };
+		0ED7A17A1C11FC980088E6E7 /* MyFoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFoodList.h; sourceTree = "<group>"; };
+		0ED7A17B1C11FC980088E6E7 /* MyFoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFoodList.m; sourceTree = "<group>"; };
 		DB62D2601C0EA48400C1A847 /* PetPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62D2641C0EA48400C1A847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB62D2651C0EA48400C1A847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -55,6 +97,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED7A16E1C11F1EB0088E6E7 /* Social.framework in Frameworks */,
+				0ED7A16C1C11F1DA0088E6E7 /* Accounts.framework in Frameworks */,
+				0ED7A16A1C11F1AE0088E6E7 /* libz.dylib in Frameworks */,
+				0ED7A1681C11F1960088E6E7 /* libsqlite3.dylib in Frameworks */,
+				0ED7A1661C11F1630088E6E7 /* SystemConfiguration.framework in Frameworks */,
+				0ED7A1641C11F1560088E6E7 /* SpriteKit.framework in Frameworks */,
+				0ED7A1621C11EDA10088E6E7 /* Security.framework in Frameworks */,
+				0ED7A1601C11ED920088E6E7 /* QuartzCore.framework in Frameworks */,
+				0ED7A15E1C11ED780088E6E7 /* CoreLocation.framework in Frameworks */,
+				0ED7A15C1C11ED6B0088E6E7 /* CoreGraphics.framework in Frameworks */,
+				0ED7A15A1C11ED5D0088E6E7 /* CFNetwork.framework in Frameworks */,
+				0ED7A1581C11ED430088E6E7 /* AudioToolbox.framework in Frameworks */,
+				0ED7A1561C11ECD50088E6E7 /* Parse.framework in Frameworks */,
+				0ED7A1551C11ECD50088E6E7 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +127,20 @@
 		DB62D2571C0EA48300C1A847 = {
 			isa = PBXGroup;
 			children = (
+				0ED7A16D1C11F1EB0088E6E7 /* Social.framework */,
+				0ED7A16B1C11F1DA0088E6E7 /* Accounts.framework */,
+				0ED7A1691C11F1AE0088E6E7 /* libz.dylib */,
+				0ED7A1671C11F1960088E6E7 /* libsqlite3.dylib */,
+				0ED7A1651C11F1630088E6E7 /* SystemConfiguration.framework */,
+				0ED7A1631C11F1560088E6E7 /* SpriteKit.framework */,
+				0ED7A1611C11EDA10088E6E7 /* Security.framework */,
+				0ED7A15F1C11ED920088E6E7 /* QuartzCore.framework */,
+				0ED7A15D1C11ED780088E6E7 /* CoreLocation.framework */,
+				0ED7A15B1C11ED6B0088E6E7 /* CoreGraphics.framework */,
+				0ED7A1591C11ED5D0088E6E7 /* CFNetwork.framework */,
+				0ED7A1571C11ED430088E6E7 /* AudioToolbox.framework */,
+				0ED7A1531C11ECD50088E6E7 /* Bolts.framework */,
+				0ED7A1541C11ECD50088E6E7 /* Parse.framework */,
 				DB62D2621C0EA48400C1A847 /* PetPal */,
 				DB62D27F1C0EA48400C1A847 /* PetPalTests */,
 				DB62D2611C0EA48400C1A847 /* Products */,
@@ -91,6 +161,15 @@
 			children = (
 				DB62D2671C0EA48400C1A847 /* AppDelegate.h */,
 				DB62D2681C0EA48400C1A847 /* AppDelegate.m */,
+				0ED7A17A1C11FC980088E6E7 /* MyFoodList.h */,
+				0ED7A17B1C11FC980088E6E7 /* MyFoodList.m */,
+				0ED7A16F1C11FC7C0088E6E7 /* FoodDataViewController.h */,
+				0ED7A1701C11FC7C0088E6E7 /* FoodDataViewController.m */,
+				0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */,
+				0ED7A1721C11FC7C0088E6E7 /* FoodList.h */,
+				0ED7A1731C11FC7C0088E6E7 /* FoodList.m */,
+				0ED7A1741C11FC7C0088E6E7 /* FoodType.h */,
+				0ED7A1751C11FC7C0088E6E7 /* FoodType.m */,
 				DB62D26D1C0EA48400C1A847 /* ViewController.h */,
 				DB62D26E1C0EA48400C1A847 /* ViewController.m */,
 				DB62D2701C0EA48400C1A847 /* Main.storyboard */,
@@ -212,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED7A1771C11FC7C0088E6E7 /* FoodDataViewController.xib in Resources */,
 				DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */,
 				DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
@@ -233,9 +313,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB62D2911C0EA60000C1A847 /* MyZoo.m in Sources */,
+				0ED7A17C1C11FC980088E6E7 /* MyFoodList.m in Sources */,
+				0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */,
 				DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */,
 				DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */,
+				0ED7A1761C11FC7C0088E6E7 /* FoodDataViewController.m in Sources */,
 				DB62D28E1C0EA57B00C1A847 /* MyPet.m in Sources */,
+				0ED7A1791C11FC7C0088E6E7 /* FoodType.m in Sources */,
 				DB62D26F1C0EA48400C1A847 /* ViewController.m in Sources */,
 				DB62D2661C0EA48400C1A847 /* main.m in Sources */,
 			);
@@ -363,6 +447,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PetPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,6 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PetPal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,6 +524,7 @@
 				DB62D2881C0EA48400C1A847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB62D2891C0EA48400C1A847 /* Build configuration list for PBXNativeTarget "PetPalTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +533,7 @@
 				DB62D28B1C0EA48400C1A847 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
