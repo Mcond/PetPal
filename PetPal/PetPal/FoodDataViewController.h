@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Parse;
+#import <Parse/Parse.h>
 @class FoodList;
 
 @interface FoodDataViewController : UIViewController<UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
@@ -20,7 +20,9 @@
 @property(strong, nonatomic) FoodList *myFoodList;
 @property(weak, nonatomic) NSString *pickedServingUnit, *pickedType;
 @property(strong, nonatomic) NSArray *sizeLables, *typeLables;
+@property (strong, nonatomic) PFObject *importedFood;
 @property (weak, nonatomic) IBOutlet UIPickerView *foodType;
+
 
 - (IBAction)pressedAddToDatabase:(id)sender;
 - (IBAction)pressedAddToMyFood:(id)sender;

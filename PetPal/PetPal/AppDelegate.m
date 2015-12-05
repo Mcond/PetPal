@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "FoodDataViewController.h"
+#import "SearchFoodDatabaseViewController.h"
+#import "FoodTabViewController.h"
+#import "HealthTabViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,8 +33,16 @@
     
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    FoodDataViewController *foodDataVC = [[FoodDataViewController alloc] init];
-    self.window.rootViewController = foodDataVC;
+    HealthTabViewController *hTVC = [[HealthTabViewController alloc]init];
+    FoodTabViewController *fTVC = [[FoodTabViewController alloc]init];
+    UINavigationController *foodVC = [[UINavigationController alloc]initWithRootViewController:fTVC];
+    foodVC.tabBarItem.title = @"Food";
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    //assign sub views to tab bar controller and set as root
+    tabBarController.viewControllers = @[foodVC, hTVC];
+    self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

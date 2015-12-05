@@ -25,7 +25,15 @@
 		0ED7A1771C11FC7C0088E6E7 /* FoodDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */; };
 		0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1731C11FC7C0088E6E7 /* FoodList.m */; };
 		0ED7A1791C11FC7C0088E6E7 /* FoodType.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1751C11FC7C0088E6E7 /* FoodType.m */; };
-		0ED7A17C1C11FC980088E6E7 /* MyFoodList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A17B1C11FC980088E6E7 /* MyFoodList.m */; };
+		0ED7A1801C1218900088E6E7 /* SearchFoodDatabaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A17E1C1218900088E6E7 /* SearchFoodDatabaseViewController.m */; };
+		0ED7A1811C1218900088E6E7 /* SearchFoodDatabaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A17F1C1218900088E6E7 /* SearchFoodDatabaseViewController.xib */; };
+		0ED7A1851C1356DD0088E6E7 /* QueryResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1831C1356DD0088E6E7 /* QueryResultsTableViewController.m */; };
+		0ED7A1861C1356DD0088E6E7 /* QueryResultsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1841C1356DD0088E6E7 /* QueryResultsTableViewController.xib */; };
+		0ED7A1891C136D3C0088E6E7 /* TableViewCellStyleValue2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1881C136D3C0088E6E7 /* TableViewCellStyleValue2.m */; };
+		0ED7A18D1C13895C0088E6E7 /* FoodTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A18B1C13895C0088E6E7 /* FoodTabViewController.m */; };
+		0ED7A18E1C13895C0088E6E7 /* FoodTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */; };
+		0ED7A1931C13A9C30088E6E7 /* HealthTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */; };
+		0ED7A1941C13A9C30088E6E7 /* HealthTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */; };
 		DB62D2661C0EA48400C1A847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2651C0EA48400C1A847 /* main.m */; };
 		DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2681C0EA48400C1A847 /* AppDelegate.m */; };
 		DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB62D26A1C0EA48400C1A847 /* PetPal.xcdatamodeld */; };
@@ -70,8 +78,20 @@
 		0ED7A1731C11FC7C0088E6E7 /* FoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodList.m; sourceTree = "<group>"; };
 		0ED7A1741C11FC7C0088E6E7 /* FoodType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodType.h; sourceTree = "<group>"; };
 		0ED7A1751C11FC7C0088E6E7 /* FoodType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodType.m; sourceTree = "<group>"; };
-		0ED7A17A1C11FC980088E6E7 /* MyFoodList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFoodList.h; sourceTree = "<group>"; };
-		0ED7A17B1C11FC980088E6E7 /* MyFoodList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFoodList.m; sourceTree = "<group>"; };
+		0ED7A17D1C1218900088E6E7 /* SearchFoodDatabaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchFoodDatabaseViewController.h; sourceTree = "<group>"; };
+		0ED7A17E1C1218900088E6E7 /* SearchFoodDatabaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchFoodDatabaseViewController.m; sourceTree = "<group>"; };
+		0ED7A17F1C1218900088E6E7 /* SearchFoodDatabaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchFoodDatabaseViewController.xib; sourceTree = "<group>"; };
+		0ED7A1821C1356DD0088E6E7 /* QueryResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryResultsTableViewController.h; sourceTree = "<group>"; };
+		0ED7A1831C1356DD0088E6E7 /* QueryResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResultsTableViewController.m; sourceTree = "<group>"; };
+		0ED7A1841C1356DD0088E6E7 /* QueryResultsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryResultsTableViewController.xib; sourceTree = "<group>"; };
+		0ED7A1871C136D3C0088E6E7 /* TableViewCellStyleValue2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellStyleValue2.h; sourceTree = "<group>"; };
+		0ED7A1881C136D3C0088E6E7 /* TableViewCellStyleValue2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellStyleValue2.m; sourceTree = "<group>"; };
+		0ED7A18A1C13895C0088E6E7 /* FoodTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTabViewController.h; sourceTree = "<group>"; };
+		0ED7A18B1C13895C0088E6E7 /* FoodTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTabViewController.m; sourceTree = "<group>"; };
+		0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodTabViewController.xib; sourceTree = "<group>"; };
+		0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthTabViewController.h; sourceTree = "<group>"; };
+		0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthTabViewController.m; sourceTree = "<group>"; };
+		0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTabViewController.xib; sourceTree = "<group>"; };
 		DB62D2601C0EA48400C1A847 /* PetPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62D2641C0EA48400C1A847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB62D2651C0EA48400C1A847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -161,8 +181,6 @@
 			children = (
 				DB62D2671C0EA48400C1A847 /* AppDelegate.h */,
 				DB62D2681C0EA48400C1A847 /* AppDelegate.m */,
-				0ED7A17A1C11FC980088E6E7 /* MyFoodList.h */,
-				0ED7A17B1C11FC980088E6E7 /* MyFoodList.m */,
 				0ED7A16F1C11FC7C0088E6E7 /* FoodDataViewController.h */,
 				0ED7A1701C11FC7C0088E6E7 /* FoodDataViewController.m */,
 				0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */,
@@ -181,6 +199,20 @@
 				DB62D28F1C0EA60000C1A847 /* MyZoo.h */,
 				DB62D2901C0EA60000C1A847 /* MyZoo.m */,
 				DB62D2631C0EA48400C1A847 /* Supporting Files */,
+				0ED7A17D1C1218900088E6E7 /* SearchFoodDatabaseViewController.h */,
+				0ED7A17E1C1218900088E6E7 /* SearchFoodDatabaseViewController.m */,
+				0ED7A1821C1356DD0088E6E7 /* QueryResultsTableViewController.h */,
+				0ED7A1831C1356DD0088E6E7 /* QueryResultsTableViewController.m */,
+				0ED7A1841C1356DD0088E6E7 /* QueryResultsTableViewController.xib */,
+				0ED7A17F1C1218900088E6E7 /* SearchFoodDatabaseViewController.xib */,
+				0ED7A1871C136D3C0088E6E7 /* TableViewCellStyleValue2.h */,
+				0ED7A1881C136D3C0088E6E7 /* TableViewCellStyleValue2.m */,
+				0ED7A18A1C13895C0088E6E7 /* FoodTabViewController.h */,
+				0ED7A18B1C13895C0088E6E7 /* FoodTabViewController.m */,
+				0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */,
+				0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */,
+				0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */,
+				0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */,
 			);
 			path = PetPal;
 			sourceTree = "<group>";
@@ -291,10 +323,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED7A1941C13A9C30088E6E7 /* HealthTabViewController.xib in Resources */,
+				0ED7A1811C1218900088E6E7 /* SearchFoodDatabaseViewController.xib in Resources */,
 				0ED7A1771C11FC7C0088E6E7 /* FoodDataViewController.xib in Resources */,
+				0ED7A18E1C13895C0088E6E7 /* FoodTabViewController.xib in Resources */,
 				DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */,
 				DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
+				0ED7A1861C1356DD0088E6E7 /* QueryResultsTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,15 +348,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED7A18D1C13895C0088E6E7 /* FoodTabViewController.m in Sources */,
 				DB62D2911C0EA60000C1A847 /* MyZoo.m in Sources */,
-				0ED7A17C1C11FC980088E6E7 /* MyFoodList.m in Sources */,
+				0ED7A1851C1356DD0088E6E7 /* QueryResultsTableViewController.m in Sources */,
 				0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */,
 				DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */,
 				DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */,
+				0ED7A1801C1218900088E6E7 /* SearchFoodDatabaseViewController.m in Sources */,
+				0ED7A1891C136D3C0088E6E7 /* TableViewCellStyleValue2.m in Sources */,
 				0ED7A1761C11FC7C0088E6E7 /* FoodDataViewController.m in Sources */,
 				DB62D28E1C0EA57B00C1A847 /* MyPet.m in Sources */,
 				0ED7A1791C11FC7C0088E6E7 /* FoodType.m in Sources */,
 				DB62D26F1C0EA48400C1A847 /* ViewController.m in Sources */,
+				0ED7A1931C13A9C30088E6E7 /* HealthTabViewController.m in Sources */,
 				DB62D2661C0EA48400C1A847 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

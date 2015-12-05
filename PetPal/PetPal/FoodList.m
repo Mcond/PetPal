@@ -7,7 +7,8 @@
 //
 
 #import "FoodList.h"
-#import <Parse/Parse.h>
+#import "FoodType.h"
+#import <UIKit/UIKit.h>
 
 @implementation FoodList
 
@@ -32,7 +33,7 @@
     return self;
 }
 
--(void)addFoodType:(PFObject*) newFood
+-(void)addFoodType:(FoodType*) newFood
 {
     [myFoodList insertObject:newFood atIndex:0];
     NSString *title = [[NSString alloc] initWithFormat:
@@ -43,5 +44,17 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+}
+
+-(void) encodeWithCoder:(NSCoder *) encoder
+{
+    [encoder encodeObject: myFoodList forKey: @"myFoods"];
+}
+
+-(id) initWithCoder:(NSCoder *) decoder
+{
+    myFoodList = [decoder decodeObjectForKey: @"myFoods"];
+    
+    return self;
 }
 @end

@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
+@class FoodType;
 
-@interface FoodList : NSObject
+@interface FoodList : NSObject<NSCoding>
 
 @property(strong, nonatomic)NSMutableArray *myFoodList;
 
 +(instancetype)defaultFoodList;
--(void)addFoodType:(PFObject*) newFood;
+-(void)addFoodType:(FoodType*) newFood;
 
 @end
