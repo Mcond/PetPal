@@ -59,7 +59,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return [thisZoo.myPets count];
     }
     else if (pickerView == pickVaccine) {
-        if ([pickedPet.breed isEqualToString:@"DOG"])
+        if ([pickedPet.petType isEqualToString:@"DOG"])
             return [vaccineLabelsDog count];
         else
             return [vaccineLabelsCat count];
@@ -76,7 +76,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return [[thisZoo.myPets objectAtIndex:row] name];
     }
     else if (pickerView == pickVaccine){
-        if ([pickedPet.breed isEqualToString:@"DOG"])
+        if ([pickedPet.petType isEqualToString:@"DOG"])
             return [vaccineLabelsDog objectAtIndex:row];
         else
             return [vaccineLabelsCat objectAtIndex:row];
@@ -93,7 +93,7 @@ numberOfRowsInComponent:(NSInteger)component{
         pickedPet = [thisZoo.myPets objectAtIndex:row];
     }
     if (pickerView == pickVaccine) {
-        if ([pickedPet.breed isEqualToString:@"DOG"])
+        if ([pickedPet.petType isEqualToString:@"DOG"])
             pickedVaccine = [vaccineLabelsDog objectAtIndex:row];
         else
             pickedVaccine = [vaccineLabelsCat objectAtIndex:row];

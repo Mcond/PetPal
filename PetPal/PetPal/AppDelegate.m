@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "FoodDataViewController.h"
 #import "SearchFoodDatabaseViewController.h"
+#import "PetInfoViewController.h"
 #import "FoodTabViewController.h"
 #import "HealthTabViewController.h"
 
@@ -35,6 +36,9 @@
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     HealthTabViewController *hTVC = [[HealthTabViewController alloc]init];
     FoodTabViewController *fTVC = [[FoodTabViewController alloc]init];
+    PetInfoViewController *pIVC = [[PetInfoViewController alloc]initWithStyle:UITableViewStylePlain];
+    UINavigationController *petInfoVC = [[UINavigationController alloc]initWithRootViewController:pIVC];
+    petInfoVC.tabBarItem.title = @"Pet Info";
     UINavigationController *foodVC = [[UINavigationController alloc]initWithRootViewController:fTVC];
     foodVC.tabBarItem.title = @"Food";
     UINavigationController *healthVC = [[UINavigationController alloc]initWithRootViewController:hTVC];
@@ -43,7 +47,7 @@
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     //assign sub views to tab bar controller and set as root
-    tabBarController.viewControllers = @[foodVC, healthVC];
+    tabBarController.viewControllers = @[petInfoVC, foodVC, healthVC];
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

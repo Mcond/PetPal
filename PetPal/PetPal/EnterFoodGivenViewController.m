@@ -109,8 +109,8 @@ numberOfRowsInComponent:(NSInteger)component{
                 pickedPet.updateDate = thisDay;
                 pickedPet.remainingCalories = pickedPet.targetCalories;
             }
-            calLabel.text = [NSString stringWithFormat:@"%@", [pickedPet remainingCalories]];
-            targetCalLabel.text = [NSString stringWithFormat:@"%@", [pickedPet targetCalories]];
+            calLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet remainingCalories]];
+            targetCalLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet targetCalories]];
         }
     }
     if (pickerView == pickFood) {
@@ -125,7 +125,7 @@ numberOfRowsInComponent:(NSInteger)component{
         calories = [[enterSize text] doubleValue] * [[pickedFood calPerServig]doubleValue];
         calInServingLabel.text = [NSString stringWithFormat:@"%d", (int)calories];
         if (pickedPet != nil) {
-            caloriesLeft = [[pickedPet remainingCalories] doubleValue] - calories;
+            caloriesLeft = [pickedPet remainingCalories] - calories;
             calLeftAfterServingLable.text = [NSString stringWithFormat:@"%d", (int)caloriesLeft];
         }
     }
@@ -141,7 +141,7 @@ numberOfRowsInComponent:(NSInteger)component{
         calories = [[enterSize text] doubleValue] * [[pickedFood calPerServig]doubleValue];
         calInServingLabel.text = [NSString stringWithFormat:@"%d", (int)calories];
         if (pickedPet != nil) {
-            caloriesLeft = [[pickedPet remainingCalories] doubleValue] - calories;
+            caloriesLeft = [pickedPet remainingCalories] - calories;
             calLeftAfterServingLable.text = [NSString stringWithFormat:@"%d", (int)caloriesLeft];
         }
     }
