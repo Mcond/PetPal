@@ -59,10 +59,10 @@
     if ((pickedPet != nil) && (pickedFood != nil)){
         calories = [[enterSize text] doubleValue] * [[pickedFood calPerServig]doubleValue];
         calInServingLabel.text = [NSString stringWithFormat:@"%d", (int)calories];
-        caloriesLeft = [[pickedPet remainingCalories] doubleValue] - calories;
+        caloriesLeft = [pickedPet remainingCalories] - calories;
         calLeftAfterServingLable.text = [NSString stringWithFormat:@"%d", (int)caloriesLeft];
-        pickedPet.remainingCalories = [NSNumber numberWithInt:(int)caloriesLeft];
-        calLabel.text = [NSString stringWithFormat:@"%@", [pickedPet remainingCalories]];
+        pickedPet.remainingCalories = (int)caloriesLeft;
+        calLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet remainingCalories]];
     }
 }
 

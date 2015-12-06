@@ -3,17 +3,18 @@
     <entity name="MyPet" representedClassName="MyPet" syncable="YES">
         <attribute name="birthDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="breed" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="consumedCalories" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="consumedCalories" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="needToLooseWeight" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="neutered" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="obeseProne" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="remainingCalories" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="targetCalories" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="petType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="remainingCalories" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="targetCalories" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
         <attribute name="updateDate" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="weight" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MyPet" positionX="-27" positionY="18" width="128" height="210"/>
+        <element name="MyPet" positionX="-27" positionY="18" width="128" height="225"/>
     </elements>
 </model>
