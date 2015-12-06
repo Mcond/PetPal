@@ -36,16 +36,19 @@
 		0ED7A1941C13A9C30088E6E7 /* HealthTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */; };
 		0ED7A1981C13ADA00088E6E7 /* EnterFoodGivenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1961C13ADA00088E6E7 /* EnterFoodGivenViewController.m */; };
 		0ED7A1991C13ADA00088E6E7 /* EnterFoodGivenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1971C13ADA00088E6E7 /* EnterFoodGivenViewController.xib */; };
+		0ED7A1A21C14A9810088E6E7 /* VaccinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1A01C14A9810088E6E7 /* VaccinesViewController.m */; };
+		0ED7A1A31C14A9810088E6E7 /* VaccinesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1A11C14A9810088E6E7 /* VaccinesViewController.xib */; };
+		0ED7A1A61C14B45A0088E6E7 /* HealthRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1A51C14B45A0088E6E7 /* HealthRecord.m */; };
+		0ED7A1A91C14B47D0088E6E7 /* HealthLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1A81C14B47D0088E6E7 /* HealthLog.m */; };
+		0ED7A1AD1C14BCFA0088E6E7 /* VaccineTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1AB1C14BCFA0088E6E7 /* VaccineTableViewController.m */; };
+		0ED7A1AE1C14BCFA0088E6E7 /* VaccineTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1AC1C14BCFA0088E6E7 /* VaccineTableViewController.xib */; };
 		DB62D2661C0EA48400C1A847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2651C0EA48400C1A847 /* main.m */; };
 		DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2681C0EA48400C1A847 /* AppDelegate.m */; };
-		DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB62D26A1C0EA48400C1A847 /* PetPal.xcdatamodeld */; };
 		DB62D26F1C0EA48400C1A847 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D26E1C0EA48400C1A847 /* ViewController.m */; };
 		DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB62D2701C0EA48400C1A847 /* Main.storyboard */; };
 		DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB62D2731C0EA48400C1A847 /* Images.xcassets */; };
 		DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB62D2751C0EA48400C1A847 /* LaunchScreen.xib */; };
 		DB62D2831C0EA48400C1A847 /* PetPalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2821C0EA48400C1A847 /* PetPalTests.m */; };
-		DB62D28E1C0EA57B00C1A847 /* MyPet.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D28D1C0EA57B00C1A847 /* MyPet.m */; };
-		DB62D2911C0EA60000C1A847 /* MyZoo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2901C0EA60000C1A847 /* MyZoo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,12 +100,21 @@
 		0ED7A1951C13ADA00088E6E7 /* EnterFoodGivenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterFoodGivenViewController.h; sourceTree = "<group>"; };
 		0ED7A1961C13ADA00088E6E7 /* EnterFoodGivenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterFoodGivenViewController.m; sourceTree = "<group>"; };
 		0ED7A1971C13ADA00088E6E7 /* EnterFoodGivenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterFoodGivenViewController.xib; sourceTree = "<group>"; };
+		0ED7A19F1C14A9810088E6E7 /* VaccinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaccinesViewController.h; sourceTree = "<group>"; };
+		0ED7A1A01C14A9810088E6E7 /* VaccinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaccinesViewController.m; sourceTree = "<group>"; };
+		0ED7A1A11C14A9810088E6E7 /* VaccinesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VaccinesViewController.xib; sourceTree = "<group>"; };
+		0ED7A1A41C14B45A0088E6E7 /* HealthRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthRecord.h; sourceTree = "<group>"; };
+		0ED7A1A51C14B45A0088E6E7 /* HealthRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthRecord.m; sourceTree = "<group>"; };
+		0ED7A1A71C14B47D0088E6E7 /* HealthLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthLog.h; sourceTree = "<group>"; };
+		0ED7A1A81C14B47D0088E6E7 /* HealthLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthLog.m; sourceTree = "<group>"; };
+		0ED7A1AA1C14BCFA0088E6E7 /* VaccineTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VaccineTableViewController.h; sourceTree = "<group>"; };
+		0ED7A1AB1C14BCFA0088E6E7 /* VaccineTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VaccineTableViewController.m; sourceTree = "<group>"; };
+		0ED7A1AC1C14BCFA0088E6E7 /* VaccineTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VaccineTableViewController.xib; sourceTree = "<group>"; };
 		DB62D2601C0EA48400C1A847 /* PetPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62D2641C0EA48400C1A847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB62D2651C0EA48400C1A847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB62D2671C0EA48400C1A847 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB62D2681C0EA48400C1A847 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB62D26B1C0EA48400C1A847 /* PetPal.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PetPal.xcdatamodel; sourceTree = "<group>"; };
 		DB62D26D1C0EA48400C1A847 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		DB62D26E1C0EA48400C1A847 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		DB62D2711C0EA48400C1A847 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,10 +123,6 @@
 		DB62D27C1C0EA48400C1A847 /* PetPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62D2811C0EA48400C1A847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB62D2821C0EA48400C1A847 /* PetPalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetPalTests.m; sourceTree = "<group>"; };
-		DB62D28C1C0EA57B00C1A847 /* MyPet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPet.h; sourceTree = "<group>"; };
-		DB62D28D1C0EA57B00C1A847 /* MyPet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPet.m; sourceTree = "<group>"; };
-		DB62D28F1C0EA60000C1A847 /* MyZoo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyZoo.h; sourceTree = "<group>"; };
-		DB62D2901C0EA60000C1A847 /* MyZoo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyZoo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,14 +178,31 @@
 				0ED7A18A1C13895C0088E6E7 /* FoodTabViewController.h */,
 				0ED7A18B1C13895C0088E6E7 /* FoodTabViewController.m */,
 				0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */,
-				0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */,
-				0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */,
-				0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */,
 				0ED7A1951C13ADA00088E6E7 /* EnterFoodGivenViewController.h */,
 				0ED7A1961C13ADA00088E6E7 /* EnterFoodGivenViewController.m */,
 				0ED7A1971C13ADA00088E6E7 /* EnterFoodGivenViewController.xib */,
 			);
 			name = "Food Tab";
+			sourceTree = "<group>";
+		};
+		0ED7A19B1C14A4E30088E6E7 /* Health Tab */ = {
+			isa = PBXGroup;
+			children = (
+				0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */,
+				0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */,
+				0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */,
+				0ED7A19F1C14A9810088E6E7 /* VaccinesViewController.h */,
+				0ED7A1A01C14A9810088E6E7 /* VaccinesViewController.m */,
+				0ED7A1A11C14A9810088E6E7 /* VaccinesViewController.xib */,
+				0ED7A1A41C14B45A0088E6E7 /* HealthRecord.h */,
+				0ED7A1A51C14B45A0088E6E7 /* HealthRecord.m */,
+				0ED7A1A71C14B47D0088E6E7 /* HealthLog.h */,
+				0ED7A1A81C14B47D0088E6E7 /* HealthLog.m */,
+				0ED7A1AA1C14BCFA0088E6E7 /* VaccineTableViewController.h */,
+				0ED7A1AB1C14BCFA0088E6E7 /* VaccineTableViewController.m */,
+				0ED7A1AC1C14BCFA0088E6E7 /* VaccineTableViewController.xib */,
+			);
+			name = "Health Tab";
 			sourceTree = "<group>";
 		};
 		DB62D2571C0EA48300C1A847 = {
@@ -220,14 +245,10 @@
 				0ED7A19A1C14A4730088E6E7 /* Food Tab */,
 				DB62D26D1C0EA48400C1A847 /* ViewController.h */,
 				DB62D26E1C0EA48400C1A847 /* ViewController.m */,
+				0ED7A19B1C14A4E30088E6E7 /* Health Tab */,
 				DB62D2701C0EA48400C1A847 /* Main.storyboard */,
 				DB62D2731C0EA48400C1A847 /* Images.xcassets */,
 				DB62D2751C0EA48400C1A847 /* LaunchScreen.xib */,
-				DB62D26A1C0EA48400C1A847 /* PetPal.xcdatamodeld */,
-				DB62D28C1C0EA57B00C1A847 /* MyPet.h */,
-				DB62D28D1C0EA57B00C1A847 /* MyPet.m */,
-				DB62D28F1C0EA60000C1A847 /* MyZoo.h */,
-				DB62D2901C0EA60000C1A847 /* MyZoo.m */,
 				DB62D2631C0EA48400C1A847 /* Supporting Files */,
 			);
 			path = PetPal;
@@ -347,7 +368,9 @@
 				DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */,
 				DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
+				0ED7A1A31C14A9810088E6E7 /* VaccinesViewController.xib in Resources */,
 				0ED7A1861C1356DD0088E6E7 /* QueryResultsTableViewController.xib in Resources */,
+				0ED7A1AE1C14BCFA0088E6E7 /* VaccineTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,20 +388,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED7A1A91C14B47D0088E6E7 /* HealthLog.m in Sources */,
 				0ED7A1981C13ADA00088E6E7 /* EnterFoodGivenViewController.m in Sources */,
 				0ED7A18D1C13895C0088E6E7 /* FoodTabViewController.m in Sources */,
-				DB62D2911C0EA60000C1A847 /* MyZoo.m in Sources */,
 				0ED7A1851C1356DD0088E6E7 /* QueryResultsTableViewController.m in Sources */,
 				0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */,
+				0ED7A1A61C14B45A0088E6E7 /* HealthRecord.m in Sources */,
 				DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */,
-				DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */,
 				0ED7A1801C1218900088E6E7 /* SearchFoodDatabaseViewController.m in Sources */,
 				0ED7A1891C136D3C0088E6E7 /* TableViewCellStyleValue2.m in Sources */,
+				0ED7A1AD1C14BCFA0088E6E7 /* VaccineTableViewController.m in Sources */,
 				0ED7A1761C11FC7C0088E6E7 /* FoodDataViewController.m in Sources */,
-				DB62D28E1C0EA57B00C1A847 /* MyPet.m in Sources */,
 				0ED7A1791C11FC7C0088E6E7 /* FoodType.m in Sources */,
 				DB62D26F1C0EA48400C1A847 /* ViewController.m in Sources */,
 				0ED7A1931C13A9C30088E6E7 /* HealthTabViewController.m in Sources */,
+				0ED7A1A21C14A9810088E6E7 /* VaccinesViewController.m in Sources */,
 				DB62D2661C0EA48400C1A847 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -594,19 +618,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		DB62D26A1C0EA48400C1A847 /* PetPal.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DB62D26B1C0EA48400C1A847 /* PetPal.xcdatamodel */,
-			);
-			currentVersion = DB62D26B1C0EA48400C1A847 /* PetPal.xcdatamodel */;
-			path = PetPal.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DB62D2581C0EA48300C1A847 /* Project object */;
 }

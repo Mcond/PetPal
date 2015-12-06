@@ -15,12 +15,12 @@
 @implementation HealthTabViewController
 
 
-//override init to set tabBarItem.title
+//override init to set NavigationItem.title
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.tabBarItem.title = @"Health";
+        self.navigationItem.title = @"Health";
     }
     return self;
 }

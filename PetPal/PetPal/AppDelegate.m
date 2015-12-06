@@ -37,11 +37,13 @@
     FoodTabViewController *fTVC = [[FoodTabViewController alloc]init];
     UINavigationController *foodVC = [[UINavigationController alloc]initWithRootViewController:fTVC];
     foodVC.tabBarItem.title = @"Food";
+    UINavigationController *healthVC = [[UINavigationController alloc]initWithRootViewController:hTVC];
+    healthVC.tabBarItem.title = @"Health";
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     
     //assign sub views to tab bar controller and set as root
-    tabBarController.viewControllers = @[foodVC, hTVC];
+    tabBarController.viewControllers = @[foodVC, healthVC];
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
