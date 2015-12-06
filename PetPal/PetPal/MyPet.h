@@ -14,15 +14,16 @@
 
 @property (nonatomic, retain) NSDate * birthDate;
 @property (nonatomic, retain) NSString * breed;
-@property (nonatomic, retain) NSNumber * consumedCalories;
+@property (nonatomic)float consumedCalories;
 @property (nonatomic, retain) NSDate * updateDate;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * remainingCalories;
-@property (nonatomic, retain) NSNumber * targetCalories;
-@property (nonatomic, retain) NSNumber * weight;
+@property (nonatomic) float remainingCalories;
+@property (nonatomic) float targetCalories;
+@property (nonatomic) float weight;
 @property (nonatomic) BOOL neutered;
 @property (nonatomic) BOOL needToLooseWeight;
 @property (nonatomic) BOOL obeseProne;
+@property (nonatomic, retain) NSString * petType;
 
 
 @end

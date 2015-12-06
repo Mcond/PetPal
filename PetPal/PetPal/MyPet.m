@@ -22,6 +22,7 @@
 @dynamic neutered;
 @dynamic needToLooseWeight;
 @dynamic obeseProne;
+@dynamic petType;
 
 
 //initialize the date updated to the date object is created
@@ -29,9 +30,11 @@
 -(void) awakeFromInsert
 {
     [super awakeFromInsert];
+    //temporarilyt set to 0.0
+    self.targetCalories = 0.0;
     self.updateDate = [NSDate date];
-    self.consumedCalories = [NSNumber numberWithFloat: 0.0];
-    self.remainingCalories =[NSNumber numberWithFloat: 0.0];
+    self.consumedCalories = 0.0;
+    self.remainingCalories = 0.0;
 }
 
 

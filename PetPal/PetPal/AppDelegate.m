@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "FoodDataViewController.h"
+#import "SearchFoodDatabaseViewController.h"
+#import "FoodTabViewController.h"
+#import "HealthTabViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +22,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse enableLocalDatastore];
+    // Initialize Parse.
+    [Parse setApplicationId:@"6OFjTNn1OCYjdA71AW30BSVqlKO4b6jIS1gYOfDm"
+                  clientKey:@"5Irf5kLVSodGvfrDdqGSTLHWnrnXNiE2NB7ym5tf"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    HealthTabViewController *hTVC = [[HealthTabViewController alloc]init];
+    FoodTabViewController *fTVC = [[FoodTabViewController alloc]init];
+    UINavigationController *foodVC = [[UINavigationController alloc]initWithRootViewController:fTVC];
+    foodVC.tabBarItem.title = @"Food";
+    UINavigationController *healthVC = [[UINavigationController alloc]initWithRootViewController:hTVC];
+    healthVC.tabBarItem.title = @"Health";
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    //assign sub views to tab bar controller and set as root
+    tabBarController.viewControllers = @[foodVC, healthVC];
+    self.window.rootViewController = tabBarController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
