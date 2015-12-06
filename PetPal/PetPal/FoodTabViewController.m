@@ -8,6 +8,7 @@
 
 #import "FoodTabViewController.h"
 #import "SearchFoodDatabaseViewController.h"
+#import "EnterFoodGivenViewController.h"
 
 @interface FoodTabViewController ()
 
@@ -52,5 +53,7 @@
 }
 
 - (IBAction)pressedEnterFoodGiven:(id)sender {
+    EnterFoodGivenViewController *eFGVC = [[EnterFoodGivenViewController alloc]init];
+    [self.navigationController pushViewController:eFGVC animated:YES];
 }
 @end

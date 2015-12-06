@@ -15,12 +15,12 @@
 @implementation HealthTabViewController
 
 
-//override init to set NavigationItem.title
+//override init to set tabBarItem.title
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.navigationItem.title = @"Health";
+        self.tabBarItem.title = @"Health";
     }
     return self;
 }
@@ -53,4 +53,15 @@
 }
 */
 
+- (IBAction)pressedReminders:(id)sender {
+}
+
+- (IBAction)pressedVaccines:(id)sender {
+}
+
+- (IBAction)pressedFTHControl:(id)sender {
+}
+
+- (IBAction)pressedContactVet:(id)sender {
+}
 @end

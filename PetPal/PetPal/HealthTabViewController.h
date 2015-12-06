@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface HealthTabViewController : UIViewController<UITabBarControllerDelegate>
+- (IBAction)pressedReminders:(id)sender;
+- (IBAction)pressedVaccines:(id)sender;
+- (IBAction)pressedFTHControl:(id)sender;
+- (IBAction)pressedContactVet:(id)sender;
 
 @end

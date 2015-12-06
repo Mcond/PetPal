@@ -56,22 +56,23 @@
     selectedFlavor = [flavorName text];
     selectedBrand = [brandName text];
     PFQuery *brandSelected = [PFQuery queryWithClassName:@"food"];
-    [brandSelected whereKey:@"brandName" containsString:selectedBrand];
+    if ([selectedBrand isEqualToString:@""])
+        [brandSelected whereKey:@"brandName" equalTo:selectedBrand];
+    else
+        [brandSelected whereKey:@"brandName" matchesRegex:selectedBrand modifiers:@"i"];
     PFQuery *flavorSelected = [PFQuery queryWithClassName:@"food"];
-    [flavorSelected whereKey:@"flavorName" containsString:selectedFlavor];
+    if ([selectedFlavor isEqualToString:@""])
+        [flavorSelected whereKey:@"flavorName" equalTo:selectedFlavor];
+    else
+        [flavorSelected whereKey:@"flavorName" matchesRegex:selectedFlavor modifiers:@"i"];
     PFQuery *uPCSelected = [PFQuery queryWithClassName:@"food"];
-    [uPCSelected whereKey:@"uPC" containsString:selectedUPC];
+    [uPCSelected whereKey:@"uPC" equalTo:selectedUPC];
      PFQuery *orQuery = [PFQuery orQueryWithSubqueries:@[brandSelected, flavorSelected, uPCSelected]];
     [orQuery whereKey:@"type" equalTo:pickedType];
     QueryResultsTableViewController *qRVC = [[QueryResultsTableViewController alloc]init];
     qRVC.queryResults = [orQuery findObjects];
     NSLog(@"Count = %lu\n",[qRVC.queryResults count]);
     [self.navigationController pushViewController:qRVC animated:YES];
-
-    //
-    //
-    //
-    //push tableview of results
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

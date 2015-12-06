@@ -34,6 +34,8 @@
 		0ED7A18E1C13895C0088E6E7 /* FoodTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */; };
 		0ED7A1931C13A9C30088E6E7 /* HealthTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */; };
 		0ED7A1941C13A9C30088E6E7 /* HealthTabViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */; };
+		0ED7A1981C13ADA00088E6E7 /* EnterFoodGivenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED7A1961C13ADA00088E6E7 /* EnterFoodGivenViewController.m */; };
+		0ED7A1991C13ADA00088E6E7 /* EnterFoodGivenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED7A1971C13ADA00088E6E7 /* EnterFoodGivenViewController.xib */; };
 		DB62D2661C0EA48400C1A847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2651C0EA48400C1A847 /* main.m */; };
 		DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2681C0EA48400C1A847 /* AppDelegate.m */; };
 		DB62D26C1C0EA48400C1A847 /* PetPal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DB62D26A1C0EA48400C1A847 /* PetPal.xcdatamodeld */; };
@@ -92,6 +94,9 @@
 		0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthTabViewController.h; sourceTree = "<group>"; };
 		0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthTabViewController.m; sourceTree = "<group>"; };
 		0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HealthTabViewController.xib; sourceTree = "<group>"; };
+		0ED7A1951C13ADA00088E6E7 /* EnterFoodGivenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterFoodGivenViewController.h; sourceTree = "<group>"; };
+		0ED7A1961C13ADA00088E6E7 /* EnterFoodGivenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterFoodGivenViewController.m; sourceTree = "<group>"; };
+		0ED7A1971C13ADA00088E6E7 /* EnterFoodGivenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterFoodGivenViewController.xib; sourceTree = "<group>"; };
 		DB62D2601C0EA48400C1A847 /* PetPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62D2641C0EA48400C1A847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB62D2651C0EA48400C1A847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +149,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED7A19A1C14A4730088E6E7 /* Food Tab */ = {
+			isa = PBXGroup;
+			children = (
+				0ED7A16F1C11FC7C0088E6E7 /* FoodDataViewController.h */,
+				0ED7A1701C11FC7C0088E6E7 /* FoodDataViewController.m */,
+				0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */,
+				0ED7A1721C11FC7C0088E6E7 /* FoodList.h */,
+				0ED7A1731C11FC7C0088E6E7 /* FoodList.m */,
+				0ED7A1741C11FC7C0088E6E7 /* FoodType.h */,
+				0ED7A1751C11FC7C0088E6E7 /* FoodType.m */,
+				0ED7A17D1C1218900088E6E7 /* SearchFoodDatabaseViewController.h */,
+				0ED7A17E1C1218900088E6E7 /* SearchFoodDatabaseViewController.m */,
+				0ED7A17F1C1218900088E6E7 /* SearchFoodDatabaseViewController.xib */,
+				0ED7A1821C1356DD0088E6E7 /* QueryResultsTableViewController.h */,
+				0ED7A1831C1356DD0088E6E7 /* QueryResultsTableViewController.m */,
+				0ED7A1841C1356DD0088E6E7 /* QueryResultsTableViewController.xib */,
+				0ED7A1871C136D3C0088E6E7 /* TableViewCellStyleValue2.h */,
+				0ED7A1881C136D3C0088E6E7 /* TableViewCellStyleValue2.m */,
+				0ED7A18A1C13895C0088E6E7 /* FoodTabViewController.h */,
+				0ED7A18B1C13895C0088E6E7 /* FoodTabViewController.m */,
+				0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */,
+				0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */,
+				0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */,
+				0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */,
+				0ED7A1951C13ADA00088E6E7 /* EnterFoodGivenViewController.h */,
+				0ED7A1961C13ADA00088E6E7 /* EnterFoodGivenViewController.m */,
+				0ED7A1971C13ADA00088E6E7 /* EnterFoodGivenViewController.xib */,
+			);
+			name = "Food Tab";
+			sourceTree = "<group>";
+		};
 		DB62D2571C0EA48300C1A847 = {
 			isa = PBXGroup;
 			children = (
@@ -181,13 +217,7 @@
 			children = (
 				DB62D2671C0EA48400C1A847 /* AppDelegate.h */,
 				DB62D2681C0EA48400C1A847 /* AppDelegate.m */,
-				0ED7A16F1C11FC7C0088E6E7 /* FoodDataViewController.h */,
-				0ED7A1701C11FC7C0088E6E7 /* FoodDataViewController.m */,
-				0ED7A1711C11FC7C0088E6E7 /* FoodDataViewController.xib */,
-				0ED7A1721C11FC7C0088E6E7 /* FoodList.h */,
-				0ED7A1731C11FC7C0088E6E7 /* FoodList.m */,
-				0ED7A1741C11FC7C0088E6E7 /* FoodType.h */,
-				0ED7A1751C11FC7C0088E6E7 /* FoodType.m */,
+				0ED7A19A1C14A4730088E6E7 /* Food Tab */,
 				DB62D26D1C0EA48400C1A847 /* ViewController.h */,
 				DB62D26E1C0EA48400C1A847 /* ViewController.m */,
 				DB62D2701C0EA48400C1A847 /* Main.storyboard */,
@@ -199,20 +229,6 @@
 				DB62D28F1C0EA60000C1A847 /* MyZoo.h */,
 				DB62D2901C0EA60000C1A847 /* MyZoo.m */,
 				DB62D2631C0EA48400C1A847 /* Supporting Files */,
-				0ED7A17D1C1218900088E6E7 /* SearchFoodDatabaseViewController.h */,
-				0ED7A17E1C1218900088E6E7 /* SearchFoodDatabaseViewController.m */,
-				0ED7A1821C1356DD0088E6E7 /* QueryResultsTableViewController.h */,
-				0ED7A1831C1356DD0088E6E7 /* QueryResultsTableViewController.m */,
-				0ED7A1841C1356DD0088E6E7 /* QueryResultsTableViewController.xib */,
-				0ED7A17F1C1218900088E6E7 /* SearchFoodDatabaseViewController.xib */,
-				0ED7A1871C136D3C0088E6E7 /* TableViewCellStyleValue2.h */,
-				0ED7A1881C136D3C0088E6E7 /* TableViewCellStyleValue2.m */,
-				0ED7A18A1C13895C0088E6E7 /* FoodTabViewController.h */,
-				0ED7A18B1C13895C0088E6E7 /* FoodTabViewController.m */,
-				0ED7A18C1C13895C0088E6E7 /* FoodTabViewController.xib */,
-				0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */,
-				0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */,
-				0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */,
 			);
 			path = PetPal;
 			sourceTree = "<group>";
@@ -327,6 +343,7 @@
 				0ED7A1811C1218900088E6E7 /* SearchFoodDatabaseViewController.xib in Resources */,
 				0ED7A1771C11FC7C0088E6E7 /* FoodDataViewController.xib in Resources */,
 				0ED7A18E1C13895C0088E6E7 /* FoodTabViewController.xib in Resources */,
+				0ED7A1991C13ADA00088E6E7 /* EnterFoodGivenViewController.xib in Resources */,
 				DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */,
 				DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
@@ -348,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED7A1981C13ADA00088E6E7 /* EnterFoodGivenViewController.m in Sources */,
 				0ED7A18D1C13895C0088E6E7 /* FoodTabViewController.m in Sources */,
 				DB62D2911C0EA60000C1A847 /* MyZoo.m in Sources */,
 				0ED7A1851C1356DD0088E6E7 /* QueryResultsTableViewController.m in Sources */,
