@@ -22,14 +22,12 @@
 
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
    
     self.pickerData_0 = [[NSArray alloc] initWithObjects: @"YES", @"NO", nil];
     self.pickerData_1 = [[NSArray alloc] initWithObjects: @"DOG", @"CAT", nil];
-    //petType.transform = CGAffineTransformMakeScale(1.0, 0.7);
-    
-    
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -51,16 +49,19 @@
         [self.needToLooseWeight selectRow: 1 inComponent: 0 animated: YES];
     if (!self.aPet.obeseProne)
         [self.obeseProne selectRow: 1 inComponent: 0 animated: YES];
+    if (self.aPet.image)
+        self.imageView.image = self.aPet.image;
+
     
 }
 
-
-
-
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 //PickerViews methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
@@ -80,15 +81,7 @@
 
 
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)saveChanges:(id)sender
 {
@@ -111,6 +104,9 @@
     if ([[self pickerView: neutered titleForRow: [neutered selectedRowInComponent:0] forComponent: 0] isEqualToString: @"YES"])
         self.aPet.neutered = YES;
     else self.aPet.neutered = NO;
+    self.aPet.targetCalories = [self.aPet calculateTargetCalories];
+    NSLog(@"%f", self.aPet.targetCalories);
+
     
 }
 
@@ -128,12 +124,27 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
     else imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePicker.delegate = self;
-    [self presentViewController: imagePicker animated: YES completion: NULL];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle: @"Save Changes" message:@"Do you want to save changes?" preferredStyle: UIAlertControllerStyleAlert];
+    UIAlertAction *save = [UIAlertAction actionWithTitle: @"SAVE" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self saveChanges: self];
+        [alert dismissViewControllerAnimated: YES completion: nil];
+        [self presentViewController: imagePicker animated: YES completion: NULL];
+    }];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle: @"CANCEL" style: UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [alert dismissViewControllerAnimated: YES completion:nil];
+        [self presentViewController: imagePicker animated: YES completion: NULL];
+    }];
+    [alert addAction: save];
+    [alert addAction: cancel];
+    [self presentViewController: alert animated: YES completion: nil];
+    
     
 }
 -(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     self.imageView.image = info[UIImagePickerControllerOriginalImage];
+    self.aPet.image = info[UIImagePickerControllerOriginalImage];
     [self dismissViewControllerAnimated: YES completion: NULL];
     
 }

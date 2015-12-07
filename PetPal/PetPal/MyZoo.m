@@ -94,7 +94,7 @@
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         NSEntityDescription *e = [NSEntityDescription entityForName: @"MyPet" inManagedObjectContext:self.context];
         request.entity = e;
-        NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending: YES];
+        NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey: @"name" ascending: YES selector:@selector(caseInsensitiveCompare:)];
         request.sortDescriptors = @[sd];
         NSError *error;
         NSArray *result = [self.context executeFetchRequest: request error: &error];

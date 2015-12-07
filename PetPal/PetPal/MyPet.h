@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import <UIKit/UIKit.h>
 
 
 @interface MyPet : NSManagedObject
@@ -24,6 +25,9 @@
 @property (nonatomic) BOOL needToLooseWeight;
 @property (nonatomic) BOOL obeseProne;
 @property (nonatomic, retain) NSString * petType;
+@property (nonatomic, retain) UIImage *image;
+
+-(float) calculateTargetCalories;
 
 
 @end
