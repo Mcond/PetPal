@@ -63,6 +63,7 @@
         calLeftAfterServingLable.text = [NSString stringWithFormat:@"%d", (int)caloriesLeft];
         pickedPet.remainingCalories = (int)caloriesLeft;
         calLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet remainingCalories]];
+        [[MyZoo sharedZoo] saveChanges];
     }
 }
 

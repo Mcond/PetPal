@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FoodType : NSObject<NSCoding>
+@interface FoodType : NSObject
 
 @property (strong, nonatomic) NSString *foodName, *servingUnit, *calPerServig, *servingSize;
 

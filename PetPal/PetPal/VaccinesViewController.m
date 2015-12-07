@@ -23,6 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.title = @"Add Vaccine";
+    thisZoo = [MyZoo sharedZoo];
     pickedPet = [thisZoo.myPets objectAtIndex:0];
     vaccineLabelsDog = [[NSArray alloc]initWithObjects:@"Canine Distemper", @"Measles", @"Parvovirus", @"Hepatitis", @"Rabies", @"CAV-2", @"Parainfluenza", @"Bordetella", @"Leptospirosis", @"Coronavirus", @"Lyme", nil];
     vaccineLabelsCat = [[NSArray alloc]initWithObjects:@"Panleukopenia", @"Rhinotracheitis", @"Calicivirus", @"Rabies", @"Feline Leukemia", @"Chlamydophila", @"Feline Infectious Peritonitis", @"Bordetella", @"Giardia", @"Feline Immunodeficiency Virus", nil];

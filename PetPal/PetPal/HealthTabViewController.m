@@ -7,6 +7,7 @@
 //
 
 #import "HealthTabViewController.h"
+#import "VaccineTableViewController.h"
 
 @interface HealthTabViewController ()
 
@@ -57,6 +58,8 @@
 }
 
 - (IBAction)pressedVaccines:(id)sender {
+    VaccineTableViewController *vTVC = [[VaccineTableViewController alloc]init];
+    [self.navigationController pushViewController:vTVC animated:YES];
 }
 
 - (IBAction)pressedFTHControl:(id)sender {

@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *pickPet;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickVaccine;
 @property (weak, nonatomic) IBOutlet UIDatePicker *pickDate;
-@property (weak, nonatomic) MyZoo *thisZoo;
+@property (strong, nonatomic) MyZoo *thisZoo;
 @property (weak, nonatomic) MyPet *pickedPet;
 @property (weak, nonatomic) HealthLog *thisLog;
 - (IBAction)pressedRecord:(id)sender;

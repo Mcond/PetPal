@@ -71,7 +71,6 @@
     [orQuery whereKey:@"type" equalTo:pickedType];
     QueryResultsTableViewController *qRVC = [[QueryResultsTableViewController alloc]init];
     qRVC.queryResults = [orQuery findObjects];
-    NSLog(@"Count = %lu\n",[qRVC.queryResults count]);
     [self.navigationController pushViewController:qRVC animated:YES];
 }
 

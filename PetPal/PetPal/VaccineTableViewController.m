@@ -71,8 +71,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"vaccineCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]] name];
-    cell.detailTextLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]]name];
+    cell.textLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]] petName];
+    cell.detailTextLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]] vaccineName];
     return cell;
 }
 

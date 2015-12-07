@@ -50,6 +50,11 @@
     }
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [[FoodList defaultFoodList] saveChanges];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -106,6 +111,7 @@
     food.calPerServig = [caloriesPerServing text];
     food.servingUnit = pickedServingUnit;
     [myFoodList addFoodType:food];
+    [[FoodList defaultFoodList] saveChanges];
 }
 
 - (IBAction)pressedUpdateinMyFood:(id)sender {
