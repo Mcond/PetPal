@@ -61,14 +61,7 @@
     contextNewHealthRecord.recordType = theRecord.recordType;
     contextNewHealthRecord.dateAdministered = theRecord.dateAdministered;
     [myLog insertObject:contextNewHealthRecord atIndex:0];
-    NSString *title = [[NSString alloc] initWithFormat:
-                       @"Flea & Tick"];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:@"Flea & Tick record saved to database."
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    [self saveChanges];
 }
 
 -(void) removeRecord: (HealthRecord *) deleteRecord
