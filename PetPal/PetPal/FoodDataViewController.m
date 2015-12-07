@@ -7,6 +7,7 @@
 //
 
 #import "FoodDataViewController.h"
+#import "MyFoodsTableViewController.h"
 #import <Parse/Parse.h>
 #import "FoodList.h"
 #import "FoodType.h"
@@ -114,7 +115,9 @@
     [[FoodList defaultFoodList] saveChanges];
 }
 
-- (IBAction)pressedUpdateinMyFood:(id)sender {
+- (IBAction)pressedManageMyFood:(id)sender {
+    MyFoodsTableViewController *mFTVC = [[MyFoodsTableViewController alloc]init];
+    [self.navigationController pushViewController:mFTVC animated:YES];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

@@ -12,6 +12,5 @@
 - (IBAction)pressedSearchDatabase:(id)sender;
 
 - (IBAction)pressedEnterFoodGiven:(id)sender;
-- (IBAction)pressedManageMyFoods:(id)sender;
 
 @end

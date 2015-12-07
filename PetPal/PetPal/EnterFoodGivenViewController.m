@@ -38,11 +38,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    pickedPet = [[thisZoo myPets] objectAtIndex:0];
+    pickedFood = [[thisFoodList myFoodList] objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (pickedPet != nil) {
+        NSCalendar *thisCalendar = [NSCalendar currentCalendar];
+        if (![thisCalendar isDateInToday:pickedPet.updateDate]) {
+            NSDate *thisDay = [NSDate date];
+            pickedPet.updateDate = thisDay;
+            pickedPet.remainingCalories = pickedPet.targetCalories;
+        }
+        calLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet remainingCalories]];
+        targetCalLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet targetCalories]];
+    }
+    if (pickedFood != nil) {
+        sizeLabel.text = [pickedFood servingUnit];
+    }
+
 }
 
 /*

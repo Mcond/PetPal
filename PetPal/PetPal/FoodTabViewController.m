@@ -58,8 +58,5 @@
     [self.navigationController pushViewController:eFGVC animated:YES];
 }
 
-- (IBAction)pressedManageMyFoods:(id)sender {
-    MyFoodsTableViewController *mFTVC = [[MyFoodsTableViewController alloc]init];
-    [self.navigationController pushViewController:mFTVC animated:YES];
-}
+
 @end

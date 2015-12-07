@@ -92,7 +92,6 @@
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        [self addNewFood];
     }   
 }
 
@@ -101,14 +100,19 @@
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     FoodType *food = [thisFoodList.myFoodList objectAtIndex:[fromIndexPath row]];
-    if ([fromIndexPath row] > [toIndexPath row]) {
+    FoodType *aFood = [[FoodType alloc]init];
+    aFood.foodName = food.foodName;
+    aFood.servingSize = food.servingSize;
+    aFood.servingUnit = food.servingUnit;
+    aFood.calPerServig = food.calPerServig;
+    if ([fromIndexPath row] < [toIndexPath row]) {
         [thisFoodList removeFood:food];
-        [thisFoodList addFoodType:food atIndex:[toIndexPath row]];
+        [thisFoodList addFoodType:aFood atIndex:[toIndexPath row]];
     }
     else
     {
         [thisFoodList removeFood:food];
-        [thisFoodList addFoodType:food atIndex:([toIndexPath row] - 1)];
+        [thisFoodList addFoodType:aFood atIndex:[toIndexPath row]];
         
     }
 }

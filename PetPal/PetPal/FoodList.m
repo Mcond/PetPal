@@ -61,6 +61,7 @@
     contextNewFood.servingSize = newFood.servingSize;
     contextNewFood.servingUnit = newFood.servingUnit;
     [myFoodList insertObject:contextNewFood atIndex:index];
+    [self saveChanges];
 }
 
 -(void)addFoodType:(FoodType*) newFood
@@ -79,6 +80,7 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+    [self saveChanges];
 }
 
 -(void) removeFood: (FoodType *) deleteFood

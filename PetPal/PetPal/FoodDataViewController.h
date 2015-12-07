@@ -26,7 +26,7 @@
 
 - (IBAction)pressedAddToDatabase:(id)sender;
 - (IBAction)pressedAddToMyFood:(id)sender;
-- (IBAction)pressedUpdateinMyFood:(id)sender;
+- (IBAction)pressedManageMyFood:(id)sender;
 
 
 @end
