@@ -9,6 +9,7 @@
 #import "FoodTabViewController.h"
 #import "SearchFoodDatabaseViewController.h"
 #import "EnterFoodGivenViewController.h"
+#import "MyFoodsTableViewController.h"
 
 @interface FoodTabViewController ()
 
@@ -47,7 +48,7 @@
     return true;
 }
 
-- (IBAction)pressedManageFoods:(id)sender {
+- (IBAction)pressedSearchDatabase:(id)sender {
     SearchFoodDatabaseViewController *sFDVC = [[SearchFoodDatabaseViewController alloc]init];
     [self.navigationController pushViewController:sFDVC animated:YES];
 }
@@ -55,5 +56,10 @@
 - (IBAction)pressedEnterFoodGiven:(id)sender {
     EnterFoodGivenViewController *eFGVC = [[EnterFoodGivenViewController alloc]init];
     [self.navigationController pushViewController:eFGVC animated:YES];
+}
+
+- (IBAction)pressedManageMyFoods:(id)sender {
+    MyFoodsTableViewController *mFTVC = [[MyFoodsTableViewController alloc]init];
+    [self.navigationController pushViewController:mFTVC animated:YES];
 }
 @end

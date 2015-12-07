@@ -67,8 +67,10 @@
 
 -(void) removeRecord: (HealthRecord *) deleteRecord
 {
+    NSManagedObject *tobeDeleted = [self.myLog objectAtIndex:[self.myLog indexOfObjectIdenticalTo:deleteRecord]];
     [self.myLog removeObjectIdenticalTo: deleteRecord];
-    [self.context delete:deleteRecord];
+    [self.context deleteObject:tobeDeleted];
+    [self saveChanges];
 }
 
 //return path that will be used to save data

@@ -19,6 +19,8 @@
 
 +(instancetype)defaultFoodList;
 -(void)addFoodType:(FoodType*) newFood;
+-(void)addFoodType:(FoodType *)newFood atIndex:(NSInteger) index;
+-(void) removeFood: (FoodType *) deleteFood;
 -(BOOL) saveChanges;
 
 @end

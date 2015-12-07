@@ -121,7 +121,8 @@ numberOfRowsInComponent:(NSInteger)component{
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
-    [enterSize resignFirstResponder];
+    if ([enterSize isFirstResponder])
+        [enterSize resignFirstResponder];
     if (pickedFood != nil) {
         calories = [[enterSize text] doubleValue] * [[pickedFood calPerServig]doubleValue];
         calInServingLabel.text = [NSString stringWithFormat:@"%d", (int)calories];

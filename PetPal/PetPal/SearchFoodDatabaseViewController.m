@@ -99,18 +99,18 @@ numberOfRowsInComponent:(NSInteger)component{
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     if ([brandName isFirstResponder])
     {
-        [brandName resignFirstResponder];
         selectedBrand = [brandName text];
+        [brandName resignFirstResponder];
     }
     if ([flavorName isFirstResponder])
     {
-        [flavorName resignFirstResponder];
         selectedFlavor = [flavorName text];
+        [flavorName resignFirstResponder];
     }
     if ([univPriceCode isFirstResponder])
     {
-        [univPriceCode resignFirstResponder];
         selectedUPC = [univPriceCode text];
+        [univPriceCode resignFirstResponder];
     }
     return YES;
 }

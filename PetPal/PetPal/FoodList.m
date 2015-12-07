@@ -53,6 +53,15 @@
     return self;
 }
 
+-(void)addFoodType:(FoodType *)newFood atIndex:(NSInteger) index
+{
+    FoodType *contextNewFood = [NSEntityDescription insertNewObjectForEntityForName:@"FoodType" inManagedObjectContext:self.context];
+    contextNewFood.foodName = newFood.foodName;
+    contextNewFood.calPerServig = newFood.calPerServig;
+    contextNewFood.servingSize = newFood.servingSize;
+    contextNewFood.servingUnit = newFood.servingUnit;
+    [myFoodList insertObject:contextNewFood atIndex:index];
+}
 
 -(void)addFoodType:(FoodType*) newFood
 {
@@ -74,8 +83,10 @@
 
 -(void) removeFood: (FoodType *) deleteFood
 {
+    NSManagedObject *tobeDeleted = [self.myFoodList objectAtIndex:[self.myFoodList indexOfObjectIdenticalTo:deleteFood]];
     [self.myFoodList removeObjectIdenticalTo: deleteFood];
-    [self.context delete:deleteFood];
+    [self.context deleteObject:tobeDeleted];
+    [self saveChanges];
     
 }
 
