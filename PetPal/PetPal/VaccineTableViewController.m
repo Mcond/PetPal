@@ -22,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    thisLog = [[HealthLog alloc]initWithName:@"Vaccine"];
+    thisLog = [HealthLog defaultHealthLog];
     [self.tableView registerClass:[TableViewCellStyleValue2 class] forCellReuseIdentifier:@"vaccineCell"];
     
     self.navigationItem.title = @"Vaccine History";
@@ -71,8 +71,12 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"vaccineCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    NSString *formattedDate = [dateFormatter stringFromDate: [[thisLog.myLog objectAtIndex:[indexPath row]] dateAdministered]];
     cell.textLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]] petName];
-    cell.detailTextLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]] vaccineName];
+    NSString *detailText = [NSString stringWithFormat:@"%@ - %@", [[thisLog.myLog objectAtIndex:[indexPath row]] vaccineName], formattedDate];
+    cell.detailTextLabel.text = detailText;
     return cell;
 }
 

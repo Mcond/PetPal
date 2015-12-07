@@ -4,11 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VaccinesViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FleaTickViewController">
             <connections>
-                <outlet property="pickDate" destination="OzM-Pm-956" id="3Kw-HS-o7W"/>
-                <outlet property="pickPet" destination="vT7-95-bXN" id="c3K-Af-mwX"/>
-                <outlet property="pickVaccine" destination="fC3-D5-F5q" id="IAn-AR-5hM"/>
+                <outlet property="pickDate" destination="48S-r9-tH3" id="9Ta-vI-1dE"/>
+                <outlet property="pickPet" destination="dQ9-jT-bUS" id="S5E-CS-hsh"/>
+                <outlet property="pickTreatment" destination="7UC-rJ-6t9" id="apE-GB-5fm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,64 +17,64 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="OzM-Pm-956">
-                    <rect key="frame" x="217" y="642" width="335" height="216"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="48S-r9-tH3">
+                    <rect key="frame" x="217" y="607" width="335" height="216"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <date key="date" timeIntervalSinceReferenceDate="471117335.03230798">
                         <!--2015-12-06 17:55:35 +0000-->
                     </date>
                 </datePicker>
-                <pickerView contentMode="scaleToFill" id="fC3-D5-F5q">
-                    <rect key="frame" x="220" y="364" width="328" height="216"/>
+                <pickerView contentMode="scaleToFill" id="7UC-rJ-6t9">
+                    <rect key="frame" x="220" y="329" width="328" height="216"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="FD9-fL-UzB"/>
-                        <outlet property="delegate" destination="-1" id="SUW-S6-p3t"/>
+                        <outlet property="dataSource" destination="-1" id="cT4-du-h0G"/>
+                        <outlet property="delegate" destination="-1" id="1iw-El-VKp"/>
                     </connections>
                 </pickerView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5zC-n7-PGn">
-                    <rect key="frame" x="363" y="94" width="42" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VNw-Nx-z2h">
+                    <rect key="frame" x="363" y="59" width="42" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7aP-Ah-soM">
-                    <rect key="frame" x="345" y="356" width="78" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vaccine:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fUP-Zu-LEB">
+                    <rect key="frame" x="345" y="321" width="78" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administered:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QXa-mQ-twT">
-                    <rect key="frame" x="96" y="588" width="576" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Administered:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N0H-Mg-ZPU">
+                    <rect key="frame" x="96" y="553" width="576" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <pickerView contentMode="scaleToFill" id="vT7-95-bXN">
-                    <rect key="frame" x="239" y="140" width="291" height="216"/>
+                <pickerView contentMode="scaleToFill" id="dQ9-jT-bUS">
+                    <rect key="frame" x="239" y="105" width="291" height="216"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="uD4-3d-GTk"/>
-                        <outlet property="delegate" destination="-1" id="fpa-eQ-dip"/>
+                        <outlet property="dataSource" destination="-1" id="GpU-jU-dwt"/>
+                        <outlet property="delegate" destination="-1" id="tMs-1G-OV9"/>
                     </connections>
                 </pickerView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="agA-ka-LDL">
-                    <rect key="frame" x="90" y="907" width="589" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q2L-XM-y6d">
+                    <rect key="frame" x="90" y="875" width="589" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Record">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="pressedRecord:" destination="-1" eventType="touchUpInside" id="F7V-rl-Rb7"/>
+                        <action selector="pressedRecord:" destination="-1" eventType="touchUpInside" id="Voz-WT-QSW"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="418" y="298"/>
+            <point key="canvasLocation" x="433" y="298"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

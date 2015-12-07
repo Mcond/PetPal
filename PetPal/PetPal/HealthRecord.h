@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface HealthRecord : NSObject<NSCoding>
+@interface HealthRecord : NSObject
 @property (strong, nonatomic) NSString *petName, *vaccineName, *recordType;
 @property (strong, nonatomic) NSDate *dateAdministered;
 

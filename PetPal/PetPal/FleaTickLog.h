@@ -1,5 +1,5 @@
 //
-//  HealthLog.h
+//  FleaTickLog.h
 //  PetPal
 //
 //  Created by Curtis Cox on 12/6/15.
@@ -10,13 +10,14 @@
 #import <CoreData/CoreData.h>
 @class HealthRecord;
 
-@interface HealthLog : NSObject
+@interface FleaTickLog : NSObject
+
 
 @property (strong, nonatomic) NSMutableArray *myLog;
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) NSManagedObjectModel *model;
 
-+(instancetype)defaultHealthLog;
++(instancetype)defaultFleaTickLog;
 -(void)addMyLogObject:(HealthRecord *) theRecord;
 
 @end

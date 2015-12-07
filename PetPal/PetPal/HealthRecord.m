@@ -24,22 +24,5 @@
     return self;
 }
 
--(void) encodeWithCoder:(NSCoder *) encoder
-{
-    [encoder encodeObject: petName forKey: @"petName"];
-    [encoder encodeObject:vaccineName forKey:@"vaccineName"];
-    [encoder encodeObject:recordType forKey:@"type"];
-    [encoder encodeObject:dateAdministered forKey:@"date"];
-}
-
--(id) initWithCoder:(NSCoder *) decoder
-{
-    petName = [decoder decodeObjectForKey: @"petName"];
-    vaccineName = [decoder decodeObjectForKey:@"vaccineName"];
-    recordType = [decoder decodeObjectForKey:@"type"];
-    dateAdministered = [decoder decodeObjectForKey:@"date"];
-    
-    return self;
-}
 
 @end

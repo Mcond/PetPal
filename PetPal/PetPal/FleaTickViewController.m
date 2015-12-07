@@ -1,32 +1,32 @@
 //
-//  VaccinesViewController.m
+//  FleaTickViewController.m
 //  PetPal
 //
 //  Created by Curtis Cox on 12/6/15.
 //  Copyright (c) 2015 Ekaterina Gumnova. All rights reserved.
 //
 
-#import "VaccinesViewController.h"
+#import "FleaTickViewController.h"
 #import "MyPet.h"
 #import "MyZoo.h"
 #import "HealthRecord.h"
-#import "HealthLog.h"
+#import "FleaTickLog.h"
 
-@interface VaccinesViewController ()
+@interface FleaTickViewController ()
 
 @end
 
-@implementation VaccinesViewController
-@synthesize vaccineLabelsCat, vaccineLabelsDog, pickedPet, pickedVaccine, pickDate, pickPet, pickVaccine, thisZoo, thisLog, pickedDate;
+@implementation FleaTickViewController
+@synthesize fleaTickLabelsCat, fleaTickLabelsDog, pickedPet, pickedTreatment, pickDate, pickPet, pickTreatment, thisZoo, thisLog, pickedDate;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationItem.title = @"Add Vaccine";
+    self.navigationItem.title = @"Add Treatment";
     thisZoo = [MyZoo sharedZoo];
     pickedPet = [thisZoo.myPets objectAtIndex:0];
-    vaccineLabelsDog = [[NSArray alloc]initWithObjects:@"Canine Distemper", @"Measles", @"Parvovirus", @"Hepatitis", @"Rabies", @"CAV-2", @"Parainfluenza", @"Bordetella", @"Leptospirosis", @"Coronavirus", @"Lyme", nil];
-    vaccineLabelsCat = [[NSArray alloc]initWithObjects:@"Panleukopenia", @"Rhinotracheitis", @"Calicivirus", @"Rabies", @"Feline Leukemia", @"Chlamydophila", @"Feline Infectious Peritonitis", @"Bordetella", @"Giardia", @"Feline Immunodeficiency Virus", nil];
+    fleaTickLabelsDog = [[NSArray alloc]initWithObjects:@"Canine Distemper", @"Measles", @"Parvovirus", @"Hepatitis", @"Rabies", @"CAV-2", @"Parainfluenza", @"Bordetella", @"Leptospirosis", @"Coronavirus", @"Lyme", nil];
+    fleaTickLabelsCat = [[NSArray alloc]initWithObjects:@"Panleukopenia", @"Rhinotracheitis", @"Calicivirus", @"Rabies", @"Feline Leukemia", @"Chlamydophila", @"Feline Infectious Peritonitis", @"Bordetella", @"Giardia", @"Feline Immunodeficiency Virus", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,14 +41,14 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -59,11 +59,11 @@ numberOfRowsInComponent:(NSInteger)component{
     if(pickerView == pickPet){
         return [thisZoo.myPets count];
     }
-    else if (pickerView == pickVaccine) {
+    else if (pickerView == pickTreatment) {
         if ([pickedPet.petType isEqualToString:@"DOG"])
-            return [vaccineLabelsDog count];
+            return [fleaTickLabelsDog count];
         else
-            return [vaccineLabelsCat count];
+            return [fleaTickLabelsCat count];
     }
     else
         return 0;
@@ -76,12 +76,12 @@ numberOfRowsInComponent:(NSInteger)component{
     if (pickerView == pickPet) {
         return [[thisZoo.myPets objectAtIndex:row] name];
     }
-    else if (pickerView == pickVaccine){
+    else if (pickerView == pickTreatment){
         if ([pickedPet.petType isEqualToString:@"DOG"])
-            return [vaccineLabelsDog objectAtIndex:row];
+            return [fleaTickLabelsDog objectAtIndex:row];
         else
-            return [vaccineLabelsCat objectAtIndex:row];
-
+            return [fleaTickLabelsCat objectAtIndex:row];
+        
     }
     else
         return @"";
@@ -93,26 +93,27 @@ numberOfRowsInComponent:(NSInteger)component{
     if(pickerView == pickPet){
         pickedPet = [thisZoo.myPets objectAtIndex:row];
     }
-    if (pickerView == pickVaccine) {
+    if (pickerView == pickTreatment) {
         if ([pickedPet.petType isEqualToString:@"DOG"])
-            pickedVaccine = [vaccineLabelsDog objectAtIndex:row];
+            pickedTreatment = [fleaTickLabelsDog objectAtIndex:row];
         else
-            pickedVaccine = [vaccineLabelsCat objectAtIndex:row];
-
+            pickedTreatment = [fleaTickLabelsCat objectAtIndex:row];
+        
     }
 }
 
 
 - (IBAction)pressedRecord:(id)sender {
-    HealthRecord *newRecord = [[HealthRecord alloc] initWithPetName:[pickedPet name] vaccineName:pickedVaccine type:@"Vaccine" andDate:pickDate.date];
+    HealthRecord *newRecord = [[HealthRecord alloc] initWithPetName:[pickedPet name] vaccineName:pickedTreatment type:@"FleaTick" andDate:pickDate.date];
     [thisLog addMyLogObject:newRecord];
     NSString *title = [[NSString alloc] initWithFormat:
-                       @"Save Vaccine"];
+                       @"Save Treatment"];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:@"Vaccine saved to database."
+                                                    message:@"Treatment saved to database."
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
 }
 @end
+

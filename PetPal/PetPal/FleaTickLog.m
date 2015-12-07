@@ -1,32 +1,31 @@
 //
-//  FoodList.m
-//  PetPalV1
+//  FleaTickLog.m
+//  PetPal
 //
-//  Created by Curtis Cox on 11/12/15.
-//  Copyright (c) 2015 Curtis Cox. All rights reserved.
+//  Created by Curtis Cox on 12/6/15.
+//  Copyright (c) 2015 Ekaterina Gumnova. All rights reserved.
 //
 
-#import "FoodList.h"
-#import "FoodType.h"
-#import <UIKit/UIKit.h>
+#import "FleaTickLog.h"
+#import "HealthRecord.h"
 
-@implementation FoodList
+@implementation FleaTickLog
+@synthesize myLog;
 
-@synthesize myFoodList;
 
-+(instancetype)defaultFoodList
++(instancetype)defaultFleaTickLog
 {
-    static FoodList *defaultFoodList = nil;
+    static FleaTickLog *defaultLog = nil;
     
-    if (!defaultFoodList) {
-        defaultFoodList = [[FoodList alloc]initPrivate];
+    if (!defaultLog) {
+        defaultLog = [[FleaTickLog alloc]initPrivate];
     }
-    return defaultFoodList;
+    return defaultLog;
 }
 
 - (instancetype)init
 {
-    [NSException raise: @"Singleton" format: @"use + [FoodList defaultFoodList]"];
+    [NSException raise: @"Singleton" format: @"use + [FleaTickLog defaultFleaTickLog]"];
     return nil;
 }
 -(instancetype) initPrivate
@@ -48,35 +47,34 @@
         //create the managed object context
         _context = [[NSManagedObjectContext alloc] init];
         _context.persistentStoreCoordinator = psc;
-        [self loadMyFood];
+        [self loadMyFleaTickLog];
     }
     return self;
 }
 
 
--(void)addFoodType:(FoodType*) newFood
+-(void)addMyLogObject:(HealthRecord *) theRecord
 {
-    FoodType *contextNewFood = [NSEntityDescription insertNewObjectForEntityForName:@"FoodType" inManagedObjectContext:self.context];
-    contextNewFood.foodName = newFood.foodName;
-    contextNewFood.calPerServig = newFood.calPerServig;
-    contextNewFood.servingSize = newFood.servingSize;
-    contextNewFood.servingUnit = newFood.servingUnit;
-    [myFoodList insertObject:contextNewFood atIndex:0];
+    HealthRecord *contextNewHealthRecord = [NSEntityDescription insertNewObjectForEntityForName:@"FTHRecord" inManagedObjectContext:self.context];
+    contextNewHealthRecord.petName = theRecord.petName;
+    contextNewHealthRecord.vaccineName = theRecord.vaccineName;
+    contextNewHealthRecord.recordType = theRecord.recordType;
+    contextNewHealthRecord.dateAdministered = theRecord.dateAdministered;
+    [myLog insertObject:contextNewHealthRecord atIndex:0];
     NSString *title = [[NSString alloc] initWithFormat:
-                       @"My Food"];
+                       @"Flea & Tick"];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:@"Food saved to database."
+                                                    message:@"Flea & Tick record saved to database."
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
 }
 
--(void) removeFood: (FoodType *) deleteFood
+-(void) removeRecord: (HealthRecord *) deleteRecord
 {
-    [self.myFoodList removeObjectIdenticalTo: deleteFood];
-    [self.context delete:deleteFood];
-    
+    [self.myLog removeObjectIdenticalTo: deleteRecord];
+    [self.context delete:deleteRecord];
 }
 
 //return path that will be used to save data
@@ -88,15 +86,15 @@
 }
 
 //fetch all of the Pet instances in zoo.data
--(void) loadMyFood
+-(void) loadMyFleaTickLog
 {
-    if (!self.myFoodList)
+    if (!self.myLog)
     {
         
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
-        NSEntityDescription *e = [NSEntityDescription entityForName: @"FoodType" inManagedObjectContext:self.context];
+        NSEntityDescription *e = [NSEntityDescription entityForName: @"FTHRecord" inManagedObjectContext:self.context];
         request.entity = e;
-        NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"foodName" ascending: YES];
+        NSSortDescriptor *sd = [NSSortDescriptor sortDescriptorWithKey:@"dateAdministered" ascending: NO];
         request.sortDescriptors = @[sd];
         NSError *error;
         NSArray *result = [self.context executeFetchRequest: request error: &error];
@@ -105,7 +103,7 @@
             [NSException raise: @"Fetch failed" format: @"Reason: %@", [error description]];
         }
         
-        self.myFoodList = [[NSMutableArray alloc] initWithArray: result];
+        self.myLog = [[NSMutableArray alloc] initWithArray: result];
     }
 }
 
@@ -117,5 +115,6 @@
         NSLog(@"Error saving: %@", [error description]);
     return successful;
 }
+
 
 @end

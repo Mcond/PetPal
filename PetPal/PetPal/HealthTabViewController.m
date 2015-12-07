@@ -8,6 +8,7 @@
 
 #import "HealthTabViewController.h"
 #import "VaccineTableViewController.h"
+#import "FleaTickTableViewController.h"
 
 @interface HealthTabViewController ()
 
@@ -63,6 +64,8 @@
 }
 
 - (IBAction)pressedFTHControl:(id)sender {
+    FleaTickTableViewController *fTTVC = [[FleaTickTableViewController alloc]init];
+    [self.navigationController pushViewController:fTTVC animated:YES];
 }
 
 - (IBAction)pressedContactVet:(id)sender {

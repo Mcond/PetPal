@@ -20,6 +20,7 @@
 @property (strong, nonatomic) MyZoo *thisZoo;
 @property (weak, nonatomic) MyPet *pickedPet;
 @property (weak, nonatomic) HealthLog *thisLog;
+@property  (weak, nonatomic) NSDate *pickedDate;
 - (IBAction)pressedRecord:(id)sender;
 
 @end
