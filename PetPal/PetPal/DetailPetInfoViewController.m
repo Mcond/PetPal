@@ -103,6 +103,7 @@
         self.aPet.neutered = YES;
     else self.aPet.neutered = NO;
     self.aPet.targetCalories = [self.aPet calculateTargetCalories];
+    self.aPet.remainingCalories = self.aPet.targetCalories;
     NSLog(@"%f", self.aPet.targetCalories);
 
     

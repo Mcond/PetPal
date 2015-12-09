@@ -98,6 +98,7 @@ numberOfRowsInComponent:(NSInteger)component{
        inComponent:(NSInteger)component{
     if(pickerView == pickPet){
         pickedPet = [thisZoo.myPets objectAtIndex:row];
+        [pickTreatment reloadAllComponents];
     }
     if (pickerView == pickTreatment) {
         if ([pickedPet.petType isEqualToString:@"DOG"])
