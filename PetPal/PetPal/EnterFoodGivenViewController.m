@@ -127,9 +127,9 @@ numberOfRowsInComponent:(NSInteger)component{
         pickedPet = [[thisZoo myPets] objectAtIndex:row];
         
         if (pickedPet != nil) {
-            NSDate *thisDay = [NSDate date];
-            bool sameDate = [thisDay isEqualToDate:pickedPet.updateDate];
-            if (!sameDate) {
+            NSCalendar *thisCalendar = [NSCalendar currentCalendar];
+            if (![thisCalendar isDateInToday:pickedPet.updateDate]) {
+                NSDate *thisDay = [NSDate date];
                 pickedPet.updateDate = thisDay;
                 pickedPet.remainingCalories = pickedPet.targetCalories;
             }

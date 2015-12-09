@@ -34,6 +34,12 @@
     pickedPet = [thisZoo.myPets objectAtIndex:0];
     vaccineLabelsDog = [[NSArray alloc]initWithObjects:@"Bordetella", @"Canine Distemper", @"CAV-2", @"Coronavirus", @"Hepatitis", @"Leptospirosis", @"Lyme", @"Measles", @"Parainfluenza", @"Parvovirus", @"Rabies", nil];
     vaccineLabelsCat = [[NSArray alloc]initWithObjects:@"Bordetella", @"Calicivirus", @"Chlamydophila", @"Feline Immunodeficiency Virus", @"Feline Infectious Peritonitis", @"Feline Leukemia", @"Giardia", @"Panleukopenia", @"Rabies", @"Rhinotracheitis", nil];
+    if (pickedPet != nil) {
+        if ([pickedPet.petType isEqualToString:@"DOG"])
+            pickedVaccine = [vaccineLabelsDog objectAtIndex:0];
+        else
+            pickedVaccine = [vaccineLabelsCat objectAtIndex:0];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

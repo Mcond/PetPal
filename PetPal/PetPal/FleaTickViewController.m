@@ -34,6 +34,12 @@
     pickedPet = [thisZoo.myPets objectAtIndex:0];
     fleaTickLabelsDog = [[NSArray alloc]initWithObjects:@"Activyl", @"Activyl Tick Plus", @"Advantage Multi", @"Bravecto", @"Comfortis", @"Fiproguard", @"Fiproguard Max", @"Flea5X Plus", @"Frontline Plus", @"Frontline Tritak", @"Heartgard", @"Heartgard Plus", @"Interceptor", @"Iverhart", @"Iverhart Max", @"K9 Advantix II", @"NexGard", @"Parastar", @"Parastar Plus", @"PetArmor", @"Sentinel", @"Sentinel Spectrum", @"Seresto", @"Trifexis", nil];
     fleaTickLabelsCat = [[NSArray alloc]initWithObjects:@"Advantage II", @"Cheristin", @"EasySpot", @"Heartgard", @"Interceptor", @"Revolution", nil];
+    if (pickedPet != nil) {
+        if ([pickedPet.petType isEqualToString:@"DOG"])
+            pickedTreatment = [fleaTickLabelsDog objectAtIndex:0];
+        else
+            pickedTreatment = [fleaTickLabelsCat objectAtIndex:0];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
