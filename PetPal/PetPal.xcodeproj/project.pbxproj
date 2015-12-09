@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E951D4C1C17D34A00EB3869 /* M AND M.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0E951D4B1C17D34A00EB3869 /* M AND M.jpg */; };
 		0ED7A1551C11ECD50088E6E7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1531C11ECD50088E6E7 /* Bolts.framework */; };
 		0ED7A1561C11ECD50088E6E7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1541C11ECD50088E6E7 /* Parse.framework */; };
 		0ED7A1581C11ED430088E6E7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED7A1571C11ED430088E6E7 /* AudioToolbox.framework */; };
@@ -83,6 +84,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E951D4B1C17D34A00EB3869 /* M AND M.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "M AND M.jpg"; sourceTree = "<group>"; };
 		0ED7A1531C11ECD50088E6E7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		0ED7A1541C11ECD50088E6E7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		0ED7A1571C11ED430088E6E7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -304,6 +306,7 @@
 		DB62D2571C0EA48300C1A847 = {
 			isa = PBXGroup;
 			children = (
+				0E951D4B1C17D34A00EB3869 /* M AND M.jpg */,
 				0ED7A16D1C11F1EB0088E6E7 /* Social.framework */,
 				0ED7A16B1C11F1DA0088E6E7 /* Accounts.framework */,
 				0ED7A1691C11F1AE0088E6E7 /* libz.dylib */,
@@ -471,6 +474,7 @@
 				DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */,
 				DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */,
 				0EEDF9DE1C14CB4300942444 /* DetailPetInfoViewController.xib in Resources */,
+				0E951D4C1C17D34A00EB3869 /* M AND M.jpg in Resources */,
 				DBDF0A4B1C16AD9400035097 /* RemindersViewController.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
 				0ED7A1A31C14A9810088E6E7 /* VaccinesViewController.xib in Resources */,

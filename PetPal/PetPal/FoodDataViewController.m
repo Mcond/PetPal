@@ -1,3 +1,10 @@
+//  PROGRAMMER:     Curtis Cox
+//  PANTHERID:      5001361
+//  GROUP:          F
+//  CLASS:          COP 465501 TR 5:00
+//  INSTRUCTOR:     Steve Luis  ECS 282
+//  ASSIGNMENT:     Group Project
+//  DUE:            Thursday 12/10/15
 //
 //  FoodDataViewController.m
 //  PetPalV1
@@ -23,7 +30,7 @@
     [super viewDidLoad];
     self.navigationItem.title = @"Add Food";
     // Do any additional setup after loading the view from its nib.
-    sizeLables = [[NSArray alloc] initWithObjects:@"cups", @"ounces", @"grams", @"pieces", @"pounds", nil];
+    sizeLables = [[NSArray alloc] initWithObjects:@"can", @"cups", @"grams", @"ounces", @"pieces", @"pouch", @"pounds", nil];
     typeLables = [[NSArray alloc] initWithObjects:@"Cat", @"Dog", nil];
 
     myFoodList = [FoodList defaultFoodList];
