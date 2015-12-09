@@ -28,6 +28,8 @@
    
     self.pickerData_0 = [[NSArray alloc] initWithObjects: @"YES", @"NO", nil];
     self.pickerData_1 = [[NSArray alloc] initWithObjects: @"DOG", @"CAT", nil];
+    
+    self.birthDate.maximumDate = [NSDate date];
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -78,15 +80,6 @@
 
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)saveChanges:(id)sender
 {
