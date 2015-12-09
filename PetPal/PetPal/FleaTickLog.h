@@ -26,5 +26,6 @@
 
 +(instancetype)defaultFleaTickLog;
 -(void)addMyLogObject:(HealthRecord *) theRecord;
+-(void) removeRecord: (HealthRecord *) deleteRecord;
 
 @end

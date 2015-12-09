@@ -70,6 +70,30 @@
     return [thisLog.myLog count];
 }
 
+//allow deletion of rows
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Delete from underlying data source first!
+    [thisLog removeRecord:[thisLog.myLog objectAtIndex:[indexPath row]]];
+    
+    // Then perform the action on the tableView
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+        [tableView endUpdates];
+    }
+    
+    // Finally, reload data in view
+    [self.tableView reloadData];
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"fleaTickCell" forIndexPath:indexPath];

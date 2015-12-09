@@ -16,7 +16,7 @@
 #import <UIKit/UIKit.h>
 @class HealthLog;
 
-@interface VaccineTableViewController : UITableViewController
+@interface VaccineTableViewController : UITableViewController<UITableViewDelegate>
 @property (strong, nonatomic) HealthLog *thisLog;
 
 @end

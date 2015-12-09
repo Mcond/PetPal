@@ -25,5 +25,6 @@
 
 +(instancetype)defaultHealthLog;
 -(void)addMyLogObject:(HealthRecord *) theRecord;
+-(void) removeRecord: (HealthRecord *) deleteRecord;
 
 @end
