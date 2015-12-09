@@ -19,7 +19,7 @@
 @implementation FleaTickLog
 @synthesize myLog;
 
-
+//Create or return the singleton FleaTickLog
 +(instancetype)defaultFleaTickLog
 {
     static FleaTickLog *defaultLog = nil;
@@ -30,11 +30,14 @@
     return defaultLog;
 }
 
+//override init to force singleton use
 - (instancetype)init
 {
     [NSException raise: @"Singleton" format: @"use + [FleaTickLog defaultFleaTickLog]"];
     return nil;
 }
+
+//populate the log with the data from core data
 -(instancetype) initPrivate
 {
     self = [super init];
@@ -59,7 +62,7 @@
     return self;
 }
 
-
+//add a new vaccine record to the Vaccine log
 -(void)addMyLogObject:(HealthRecord *) theRecord
 {
     HealthRecord *contextNewHealthRecord = [NSEntityDescription insertNewObjectForEntityForName:@"FTHRecord" inManagedObjectContext:self.context];
@@ -71,6 +74,7 @@
     [self saveChanges];
 }
 
+//delete a record from the vaccine log
 -(void) removeRecord: (HealthRecord *) deleteRecord
 {
     NSManagedObject *tobeDeleted = [self.myLog objectAtIndex:[self.myLog indexOfObjectIdenticalTo:deleteRecord]];
@@ -87,7 +91,7 @@
     return [documentDirectory stringByAppendingPathComponent: @"store.data"];
 }
 
-//fetch all of the Pet instances in zoo.data
+//fetch all of the HealthRecord instances in coredata
 -(void) loadMyFleaTickLog
 {
     if (!self.myLog)
@@ -109,6 +113,7 @@
     }
 }
 
+//Update coreData to reflect current Log
 -(BOOL) saveChanges
 {
     NSError *error;

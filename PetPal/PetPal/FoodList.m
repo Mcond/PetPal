@@ -21,6 +21,7 @@
 
 @synthesize myFoodList;
 
+//Create or return the singleton Local Food list
 +(instancetype)defaultFoodList
 {
     static FoodList *defaultFoodList = nil;
@@ -31,11 +32,15 @@
     return defaultFoodList;
 }
 
+//override init to force singleton use
 - (instancetype)init
 {
     [NSException raise: @"Singleton" format: @"use + [FoodList defaultFoodList]"];
     return nil;
 }
+
+//Private init method for Singleton creation
+//set up coredata context
 -(instancetype) initPrivate
 {
     self = [super init];
@@ -60,6 +65,7 @@
     return self;
 }
 
+//Insert a food into a specific spot in the local food list
 -(void)addFoodType:(FoodType *)newFood atIndex:(NSInteger) index
 {
     FoodType *contextNewFood = [NSEntityDescription insertNewObjectForEntityForName:@"FoodType" inManagedObjectContext:self.context];
@@ -71,6 +77,7 @@
     [self saveChanges];
 }
 
+//Insert a food into the local food list
 -(void)addFoodType:(FoodType*) newFood
 {
     FoodType *contextNewFood = [NSEntityDescription insertNewObjectForEntityForName:@"FoodType" inManagedObjectContext:self.context];
@@ -90,6 +97,7 @@
     [self saveChanges];
 }
 
+//remove a food from the local food list
 -(void) removeFood: (FoodType *) deleteFood
 {
     NSManagedObject *tobeDeleted = [self.myFoodList objectAtIndex:[self.myFoodList indexOfObjectIdenticalTo:deleteFood]];
@@ -107,7 +115,7 @@
     return [documentDirectory stringByAppendingPathComponent: @"store.data"];
 }
 
-//fetch all of the Pet instances in zoo.data
+//fetch all of the food instances in coredata
 -(void) loadMyFood
 {
     if (!self.myFoodList)
@@ -129,6 +137,7 @@
     }
 }
 
+//save changes to core data
 -(BOOL) saveChanges
 {
     NSError *error;

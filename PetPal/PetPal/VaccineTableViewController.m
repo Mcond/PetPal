@@ -48,6 +48,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Method call by navbar + button
+//pushes a VaccinesViewController
 -(void)addNewVaccine
 {
     VaccinesViewController *vVC = [[VaccinesViewController alloc]init];

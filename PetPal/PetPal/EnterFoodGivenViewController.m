@@ -41,7 +41,7 @@
     return self;
 }
 
-
+//set pickedPet and pickedFood to match default selection
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -54,6 +54,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Check if pet has been fed today, if not, reset remainingCal
+//and update updateDate
 -(void)viewWillAppear:(BOOL)animated
 {
     if (pickedPet != nil) {
@@ -72,6 +74,7 @@
 
 }
 
+//Update the pet's remaining cal to reflect the food given
 - (IBAction)pressedConfirm:(id)sender {
     if ((pickedPet != nil) && (pickedFood != nil)){
         calories = [[enterSize text] doubleValue] * [[pickedFood calPerServig]doubleValue];
@@ -83,6 +86,8 @@
         [[MyZoo sharedZoo] saveChanges];
     }
 }
+
+//UIPickerViewDataSource Methods:
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -114,6 +119,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return @"";
 }
 
+//UIPickerViewDelegate method
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
@@ -137,6 +143,7 @@ numberOfRowsInComponent:(NSInteger)component{
     }
 }
 
+//UITextFieldDelegate method
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     if ([enterSize isFirstResponder])
         [enterSize resignFirstResponder];

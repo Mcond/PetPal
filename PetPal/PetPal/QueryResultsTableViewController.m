@@ -40,6 +40,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Method call by navbar + button
+//pushes a FoodDataViewController
 -(void)addNewFood{
     FoodDataViewController *fDVC = [[FoodDataViewController alloc]init];
     [self.navigationController pushViewController:fDVC animated:YES];

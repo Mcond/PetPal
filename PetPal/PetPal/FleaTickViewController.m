@@ -47,6 +47,8 @@
     return true;
 }
 
+//UIPickerViewDataSource methods:
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
@@ -84,6 +86,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return @"";
 }
 
+//UIPickerViewDelegate method
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
@@ -99,7 +102,8 @@ numberOfRowsInComponent:(NSInteger)component{
     }
 }
 
-
+//saves the entered information into a new HealthRecord
+//in the log
 - (IBAction)pressedRecord:(id)sender {
     HealthRecord *newRecord = [[HealthRecord alloc] initWithPetName:[pickedPet name] vaccineName:pickedTreatment type:@"FleaTick" andDate:pickDate.date];
     [thisLog addMyLogObject:newRecord];

@@ -17,6 +17,7 @@
 
 @implementation TableViewCellStyleValue2
 
+//Set Style to Value2
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier {
     if (self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:reuseIdentifier]) {
     }

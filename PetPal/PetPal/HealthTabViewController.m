@@ -38,8 +38,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,6 +51,7 @@
     return true;
 }
 
+//pushes a RemindersViewController
 - (IBAction)pressedReminders:(id)sender
 {
     RemindersViewController *rVC = [[RemindersViewController alloc] initWithStyle: UITableViewStylePlain];
@@ -60,11 +59,13 @@
     
 }
 
+//pushes a VaccineTableViewController
 - (IBAction)pressedVaccines:(id)sender {
     VaccineTableViewController *vTVC = [[VaccineTableViewController alloc]init];
     [self.navigationController pushViewController:vTVC animated:YES];
 }
 
+//pushes a FleaTickTableViewController
 - (IBAction)pressedFTHControl:(id)sender {
     FleaTickTableViewController *fTTVC = [[FleaTickTableViewController alloc]init];
     [self.navigationController pushViewController:fTTVC animated:YES];

@@ -20,7 +20,7 @@
 @implementation HealthLog
 @synthesize myLog;
 
-
+//Create or return the singelton HealthLog
 +(instancetype)defaultHealthLog
 {
     static HealthLog *defaultLog = nil;
@@ -31,11 +31,14 @@
     return defaultLog;
 }
 
+//Override init to force use of singleton
 - (instancetype)init
 {
     [NSException raise: @"Singleton" format: @"use + [HealthLog defaultHealthLog]"];
     return nil;
 }
+
+//Populate the singleton HealthLog from the coredata
 -(instancetype) initPrivate
 {
     self = [super init];
@@ -60,7 +63,7 @@
     return self;
 }
 
-
+//add a new HealthRecord to the log
 -(void)addMyLogObject:(HealthRecord *) theRecord
 {
     HealthRecord *contextNewHealthRecord = [NSEntityDescription insertNewObjectForEntityForName:@"VaccineRecord" inManagedObjectContext:self.context];
@@ -72,6 +75,7 @@
     [self saveChanges];
 }
 
+//delete a HealthRecord from the log and coredata
 -(void) removeRecord: (HealthRecord *) deleteRecord
 {
     NSManagedObject *tobeDeleted = [self.myLog objectAtIndex:[self.myLog indexOfObjectIdenticalTo:deleteRecord]];
@@ -88,7 +92,7 @@
     return [documentDirectory stringByAppendingPathComponent: @"store.data"];
 }
 
-//fetch all of the Pet instances in zoo.data
+//fetch all of the HealthRecord instances in coredata
 -(void) loadMyHealthLog
 {
     if (!self.myLog)
@@ -110,6 +114,7 @@
     }
 }
 
+//Update coredata to reflect current Log
 -(BOOL) saveChanges
 {
     NSError *error;

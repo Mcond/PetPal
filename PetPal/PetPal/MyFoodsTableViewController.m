@@ -45,6 +45,8 @@
     [self.tableView reloadData];
 }
 
+//Method call by navbar + button
+//pushes a FoodDataViewController
 -(void)addNewFood{
     FoodDataViewController *fDVC = [[FoodDataViewController alloc]init];
     [self.navigationController pushViewController:fDVC animated:YES];
@@ -87,8 +89,6 @@
     }   
 }
 
-
-
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
     FoodType *food = [thisFoodList.myFoodList objectAtIndex:[fromIndexPath row]];
@@ -108,8 +108,6 @@
         
     }
 }
-
-
 
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {

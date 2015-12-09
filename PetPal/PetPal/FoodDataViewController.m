@@ -36,6 +36,7 @@
     myFoodList = [FoodList defaultFoodList];
 }
 
+//populate the view with the previously selected food
 -(void)viewWillAppear:(BOOL)animated
 {
     if (importedFood != nil) {
@@ -58,6 +59,7 @@
     }
 }
 
+//Save changed to core Data
 -(void)viewWillDisappear:(BOOL)animated
 {
     [[FoodList defaultFoodList] saveChanges];
@@ -68,6 +70,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Add the input food to the Global Parse Database
 - (IBAction)pressedAddToDatabase:(id)sender {
     
     PFObject *food = [PFObject objectWithClassName:@"food"];
@@ -102,6 +105,7 @@
     }];
 }
 
+//Add the Food to the Local food list
 - (IBAction)pressedAddToMyFood:(id)sender {
     FoodType *food = [[FoodType alloc]init];
     food.foodName = [NSString stringWithFormat:@"%@ - %@",[brandName text], [FlavorName text]];
@@ -112,10 +116,13 @@
     [[FoodList defaultFoodList] saveChanges];
 }
 
+//change view to the local food list
 - (IBAction)pressedManageMyFood:(id)sender {
     MyFoodsTableViewController *mFTVC = [[MyFoodsTableViewController alloc]init];
     [self.navigationController pushViewController:mFTVC animated:YES];
 }
+
+//UIPickerViewDataSource methods:
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -147,6 +154,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return @"";
 }
 
+//UIPicketviewDelagte method
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
@@ -158,6 +166,7 @@ numberOfRowsInComponent:(NSInteger)component{
     }
 }
 
+//UITextFeildDelegate method
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     if ([brandName isFirstResponder])
         [brandName resignFirstResponder];

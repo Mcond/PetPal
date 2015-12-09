@@ -1,3 +1,10 @@
+//  PROGRAMMER:     
+//  PANTHERID:
+//  GROUP:          F
+//  CLASS:          COP 465501 TR 5:00
+//  INSTRUCTOR:     Steve Luis  ECS 282
+//  ASSIGNMENT:     Group Project
+//  DUE:            Thursday 12/10/15
 //
 //  AppDelegate.h
 //  PetPal

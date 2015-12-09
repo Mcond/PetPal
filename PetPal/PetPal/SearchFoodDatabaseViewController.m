@@ -42,11 +42,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Method call by navbar + button
+//pushes a FoodDataViewController
 -(void)addNewFood{
     FoodDataViewController *fDVC = [[FoodDataViewController alloc]init];
     [self.navigationController pushViewController:fDVC animated:YES];
 }
 
+//Searches the global food database for foods matching the search criteria
+//Search is case insensitive and searches for and match of the strings
+//except UPS which must be an exact match
 - (IBAction)pressedSearch:(id)sender {
     selectedUPC = [univPriceCode text];
     selectedFlavor = [flavorName text];
@@ -70,6 +75,8 @@
     [self.navigationController pushViewController:qRVC animated:YES];
 }
 
+//UIPickerViewDataSourceDelegate methods:
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
@@ -86,12 +93,14 @@ numberOfRowsInComponent:(NSInteger)component{
     return [typeLables objectAtIndex:row];
 }
 
+//UIPickerViewDelegate method
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
     pickedType = [typeLables objectAtIndex:row];
 }
 
+//UITextFieldDelegate Method
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     if ([brandName isFirstResponder])
     {

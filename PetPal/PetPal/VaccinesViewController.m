@@ -47,6 +47,8 @@
     return true;
 }
 
+//UIPickerViewDataSource Methods:
+
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
@@ -84,6 +86,7 @@ numberOfRowsInComponent:(NSInteger)component{
         return @"";
 }
 
+//UIPickerViewDelegate method
 - (void)pickerView:(UIPickerView *)pickerView
       didSelectRow:(NSInteger)row
        inComponent:(NSInteger)component{
@@ -99,6 +102,7 @@ numberOfRowsInComponent:(NSInteger)component{
     }
 }
 
+//Saves the entered data to the coreData
 - (IBAction)pressedRecord:(id)sender {
     HealthRecord *newRecord = [[HealthRecord alloc] initWithPetName:[pickedPet name] vaccineName:pickedVaccine type:@"Vaccine" andDate:pickDate.date];
     [thisLog addMyLogObject:newRecord];

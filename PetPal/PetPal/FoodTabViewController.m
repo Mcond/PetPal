@@ -45,11 +45,13 @@
     return true;
 }
 
+//Pushes a SeachFoodDatabaseViewController
 - (IBAction)pressedSearchDatabase:(id)sender {
     SearchFoodDatabaseViewController *sFDVC = [[SearchFoodDatabaseViewController alloc]init];
     [self.navigationController pushViewController:sFDVC animated:YES];
 }
 
+//pushes a EnterFoodGivenViewController
 - (IBAction)pressedEnterFoodGiven:(id)sender {
     EnterFoodGivenViewController *eFGVC = [[EnterFoodGivenViewController alloc]init];
     [self.navigationController pushViewController:eFGVC animated:YES];

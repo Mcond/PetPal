@@ -18,7 +18,7 @@
 @implementation HealthRecord
 @synthesize petName, vaccineName, recordType, dateAdministered;
 
-
+//Create a HealthRecord object 
 -(instancetype)initWithPetName:(NSString*)pet vaccineName:(NSString*)vaccine type:(NSString*)theType andDate:(NSDate*)date
 {
     self = [super init];
