@@ -2,9 +2,10 @@
 //  ContactsViewController.m
 //  PetPal
 //
-//  Created by Miguel Conde on 12/10/15.
-//  Copyright (c) 2015 Ekaterina Gumnova. All rights reserved.
+//  Created by Miguel Conde on 12/08/15.
+//  Copyright (c) 2015 Miguel Conde. All rights reserved.
 //
+
 
 #import "ContactsViewController.h"
 
@@ -19,7 +20,9 @@
     
     [self.tableView registerClass: [UITableViewCell class] forCellReuseIdentifier: @"UITableViewCell"];
     
+    //set the tital to my contacts
     self.navigationItem.title = @"My Contacts";
+    //Create an add button and associate the method addContact to it
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target: self action: @selector (addContact:)];
     self.navigationItem.rightBarButtonItem = add;
     
@@ -38,40 +41,54 @@
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    //Reload the cells with update information
     [self.tableView reloadData];
 }
 
+//Method to add a new contact
 -(IBAction) addContact:(id)sender
 {
+    //create an init Contact with empty params
     MyContact *newContact = [[ContactBook sharedContacts] addContactWitFirstName: @"" lastName:@"" email:@"" association:@"" phoneNumber:@""];
     
+    //init the Contact view controller
     ContactInfoViewController *ContactInfoView = [[ContactInfoViewController alloc] init];
+    
+    //Set the contact to this new contact
+    //used to fill out the text fields and image field
     ContactInfoView.contact = newContact;
+    
+    //Transition to contactinfo View with animation
     [self.navigationController pushViewController: ContactInfoView animated: YES];
 }
 
 
 #pragma mark - Table view data source
 
+//Get the total number of contacts
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [[ContactBook sharedContacts] contacts];
 }
 
-
+//Used to set the cells
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     MyContact *contact = [ContactBook sharedContacts].myContacts[indexPath.row];
     
+    //String that will be used to represent the contact information to the user
     NSString *contactInfo = @"";
+    
     contactInfo = [contactInfo stringByAppendingString:contact.firstName];
     contactInfo = [contactInfo stringByAppendingString: @" "];
     contactInfo = [contactInfo stringByAppendingString:contact.lastName];
     contactInfo = [contactInfo stringByAppendingString:@"         "];
     contactInfo = [contactInfo stringByAppendingString:contact.association];
-    NSLog(@"Contact name is: %@",contactInfo);
+    contactInfo = [contactInfo stringByAppendingString:@"         "];
+    contactInfo = [contactInfo stringByAppendingString:contact.phoneNumber];
     
+    //set cell image and contact info
     cell.imageView.image = contact.image;
     cell.textLabel.text = contactInfo;
     
@@ -82,7 +99,7 @@
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //create & push DetailPetInfoViewController *dpivc onto nav controller's stack
+    //create & push COntactInfoViewController *dpivc onto nav controller's stack
     //give detail view controller a pointer to the pet object in row
     ContactInfoViewController *contactInfo = [[ContactInfoViewController alloc] init];
     contactInfo.contact = [ContactBook sharedContacts].myContacts[indexPath.row];

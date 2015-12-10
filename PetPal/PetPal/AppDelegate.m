@@ -79,7 +79,7 @@
     {
         NSLog(@"Not Saved");
     }
-    //success = [[ContactBook sharedContacts] saveChanges];
+    success = [[ContactBook sharedContacts] saveChanges];
     if (success)
     {
         NSLog(@"ContactBook Saved");

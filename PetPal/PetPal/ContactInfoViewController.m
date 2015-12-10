@@ -2,8 +2,8 @@
 //  ContactInfoViewController.m
 //  PetPal
 //
-//  Created by Miguel Conde on 12/10/15.
-//  Copyright (c) 2015 Ekaterina Gumnova. All rights reserved.
+//  Created by Miguel Conde on 12/09/15.
+//  Copyright (c) 2015 Miguel Conde. All rights reserved.
 //
 
 #import "ContactInfoViewController.h"
@@ -26,6 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+//Set the titel for Page
+//And set valie of text field to equal the current contacts values
 -(void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -52,11 +54,15 @@
     
 }
 
+//dismiss keyboard on return
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
+
+//dismiss keyboard
+// set contact values to text field values
 - (IBAction)saveChanges:(id)sender
 {
     //clear the first responder
@@ -70,6 +76,7 @@
     
 }
 
+//Upload picture
 - (IBAction)takePicture:(id)sender
 {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
@@ -95,6 +102,7 @@
     
 }
 
+//removes contact
 - (IBAction)deleteContact:(id)sender
 {
     [[ContactBook sharedContacts] removeContact: self.contact];

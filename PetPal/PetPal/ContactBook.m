@@ -2,9 +2,10 @@
 //  ContactBook.m
 //  PetPal
 //
-//  Created by Miguel Conde on 12/10/15.
-//  Copyright (c) 2015 Ekaterina Gumnova. All rights reserved.
+//  Created by Miguel Conde on 12/08/15.
+//  Copyright (c) 2015 Miguel Conde. All rights reserved.
 //
+
 
 #import "ContactBook.h"
 
@@ -12,6 +13,8 @@
 
 @synthesize myContacts;
 
+//Uses Singleton pattern, so at ost there is only one instance of this class in the application
+// If the instance exists, return it, else create a new one
 +(instancetype) sharedContacts
 {
     static ContactBook *sharedContacts;
@@ -29,6 +32,8 @@
     return nil;
 }
 
+//pirvate constructor
+//sets up connection to Core Data
 -(instancetype) initPrivate
 {
     self = [super init];
@@ -57,7 +62,7 @@
 {
     if (!self.myContacts)
     {
-        
+        //Fetch all records from DB that match the enityt name MyContact
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         NSEntityDescription *e = [NSEntityDescription entityForName: @"MyContact" inManagedObjectContext:self.context];
         request.entity = e;
@@ -69,11 +74,12 @@
         {
             [NSException raise: @"Fetch failed" format: @"Reason: %@", [error description]];
         }
-        
+        // set mycontacts array to fetch result
         self.myContacts = [[NSMutableArray alloc] initWithArray: result];
     }
 }
 
+//Create a new contact
 -(MyContact *) addContactWitFirstName: (NSString *) firstName lastName: (NSString *) lastName email: (NSString *) contactEmail association: (NSString *) userAssociation phoneNumber: (NSString*) phoneNumber
 {
     MyContact *contact = [NSEntityDescription insertNewObjectForEntityForName: @"MyContact" inManagedObjectContext: self.context];
@@ -83,6 +89,7 @@
     contact.association = userAssociation;
     contact.phoneNumber = phoneNumber;
     
+    //add to myContacts
     [self.myContacts addObject: contact];
     return contact;
 
@@ -96,6 +103,7 @@
     return [documentDirectory stringByAppendingPathComponent: @"store.data"];
 }
 
+//remove contact from both myContacts and NSManagedObjectContext
 -(void) removeContact:(MyContact *)aContact
 {
     [self.myContacts removeObjectIdenticalTo: aContact];
@@ -103,11 +111,13 @@
     
 }
 
+//returns size of myContacts
 -(NSInteger) contacts
 {
     return [myContacts count];
 }
 
+//Edits MyContact record with new information
 -(BOOL) saveChanges
 {
     NSError *error;
