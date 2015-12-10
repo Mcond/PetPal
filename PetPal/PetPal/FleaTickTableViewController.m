@@ -36,6 +36,7 @@
     self.navigationItem.title = @"Pest Treatment History";
     UIBarButtonItem *addButon = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewTreatment)];
     self.navigationItem.rightBarButtonItem = addButon;
+    self.tableView.rowHeight = 100;
 }
 
 -(void)viewWillAppear:(BOOL)animated

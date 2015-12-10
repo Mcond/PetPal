@@ -35,6 +35,7 @@
     self.navigationItem.title = @"Vaccine History";
     UIBarButtonItem *addButon = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewVaccine)];
     self.navigationItem.rightBarButtonItem = addButon;
+    self.tableView.rowHeight = 100;
     
 }
 
@@ -98,12 +99,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"vaccineCell" forIndexPath:indexPath];
     
     // Configure the cell...
+    
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     NSString *formattedDate = [dateFormatter stringFromDate: [[thisLog.myLog objectAtIndex:[indexPath row]] dateAdministered]];
     cell.textLabel.text = [[thisLog.myLog objectAtIndex:[indexPath row]] petName];
     NSString *detailText = [NSString stringWithFormat:@"%@ - %@", [[thisLog.myLog objectAtIndex:[indexPath row]] vaccineName], formattedDate];
     cell.detailTextLabel.text = detailText;
+    
     return cell;
 }
 

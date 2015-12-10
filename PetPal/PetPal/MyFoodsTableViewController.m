@@ -33,6 +33,7 @@
     
     self.navigationItem.title = @"My Food List";
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.tableView.rowHeight = 100;
 }
 
 - (void)didReceiveMemoryWarning {

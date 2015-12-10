@@ -33,6 +33,7 @@
     self.navigationItem.title = @"Search Results";
     UIBarButtonItem *addButon = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewFood)];
     self.navigationItem.rightBarButtonItem = addButon;
+    self.tableView.rowHeight = 100;
 }
 
 - (void)didReceiveMemoryWarning {

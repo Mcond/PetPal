@@ -21,6 +21,9 @@
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString*)reuseIdentifier {
     if (self = [super initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:reuseIdentifier]) {
     }
+    self.textLabel.font = [UIFont fontWithName:@"Helvetica" size:22];
+    self.detailTextLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
+
     
     return self;
 }
