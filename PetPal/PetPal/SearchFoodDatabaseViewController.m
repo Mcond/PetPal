@@ -40,17 +40,6 @@
     [self.navigationController pushViewController:fDVC animated:YES];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)pressedSearch:(id)sender {
     selectedUPC = [univPriceCode text];
     selectedFlavor = [flavorName text];
@@ -99,18 +88,18 @@ numberOfRowsInComponent:(NSInteger)component{
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
     if ([brandName isFirstResponder])
     {
-        [brandName resignFirstResponder];
         selectedBrand = [brandName text];
+        [brandName resignFirstResponder];
     }
     if ([flavorName isFirstResponder])
     {
-        [flavorName resignFirstResponder];
         selectedFlavor = [flavorName text];
+        [flavorName resignFirstResponder];
     }
     if ([univPriceCode isFirstResponder])
     {
-        [univPriceCode resignFirstResponder];
         selectedUPC = [univPriceCode text];
+        [univPriceCode resignFirstResponder];
     }
     return YES;
 }

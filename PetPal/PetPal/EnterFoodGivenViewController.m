@@ -38,6 +38,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    pickedPet = [[thisZoo myPets] objectAtIndex:0];
+    pickedFood = [[thisFoodList myFoodList] objectAtIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,15 +47,23 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (pickedPet != nil) {
+        NSCalendar *thisCalendar = [NSCalendar currentCalendar];
+        if (![thisCalendar isDateInToday:pickedPet.updateDate]) {
+            NSDate *thisDay = [NSDate date];
+            pickedPet.updateDate = thisDay;
+            pickedPet.remainingCalories = pickedPet.targetCalories;
+        }
+        calLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet remainingCalories]];
+        targetCalLabel.text = [NSString stringWithFormat:@"%d", (int)[pickedPet targetCalories]];
+    }
+    if (pickedFood != nil) {
+        sizeLabel.text = [pickedFood servingUnit];
+    }
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
 
 - (IBAction)pressedConfirm:(id)sender {
     if ((pickedPet != nil) && (pickedFood != nil)){
@@ -121,7 +131,8 @@ numberOfRowsInComponent:(NSInteger)component{
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField{
-    [enterSize resignFirstResponder];
+    if ([enterSize isFirstResponder])
+        [enterSize resignFirstResponder];
     if (pickedFood != nil) {
         calories = [[enterSize text] doubleValue] * [[pickedFood calPerServig]doubleValue];
         calInServingLabel.text = [NSString stringWithFormat:@"%d", (int)calories];

@@ -45,7 +45,7 @@
     [offsetComponents setYear: 1];
     NSDate *checkDate = [gregorian dateByAddingComponents: offsetComponents toDate: self.birthDate options:0];
     weightKg = self.weight * 0.453592;
-    rer = 70 * weightKg;
+    rer = 70 * pow(weightKg, 0.75);
     //Feline
     if ([self.petType isEqualToString: @"CAT"])
     {

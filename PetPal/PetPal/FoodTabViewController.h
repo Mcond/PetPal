@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface FoodTabViewController : UIViewController<UITabBarControllerDelegate>
-- (IBAction)pressedManageFoods:(id)sender;
+- (IBAction)pressedSearchDatabase:(id)sender;
 
 - (IBAction)pressedEnterFoodGiven:(id)sender;
 

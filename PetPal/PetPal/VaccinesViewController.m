@@ -25,8 +25,8 @@
     self.navigationItem.title = @"Add Vaccine";
     thisZoo = [MyZoo sharedZoo];
     pickedPet = [thisZoo.myPets objectAtIndex:0];
-    vaccineLabelsDog = [[NSArray alloc]initWithObjects:@"Canine Distemper", @"Measles", @"Parvovirus", @"Hepatitis", @"Rabies", @"CAV-2", @"Parainfluenza", @"Bordetella", @"Leptospirosis", @"Coronavirus", @"Lyme", nil];
-    vaccineLabelsCat = [[NSArray alloc]initWithObjects:@"Panleukopenia", @"Rhinotracheitis", @"Calicivirus", @"Rabies", @"Feline Leukemia", @"Chlamydophila", @"Feline Infectious Peritonitis", @"Bordetella", @"Giardia", @"Feline Immunodeficiency Virus", nil];
+    vaccineLabelsDog = [[NSArray alloc]initWithObjects:@"Bordetella", @"Canine Distemper", @"CAV-2", @"Coronavirus", @"Hepatitis", @"Leptospirosis", @"Lyme", @"Measles", @"Parainfluenza", @"Parvovirus", @"Rabies", nil];
+    vaccineLabelsCat = [[NSArray alloc]initWithObjects:@"Bordetella", @"Calicivirus", @"Chlamydophila", @"Feline Immunodeficiency Virus", @"Feline Infectious Peritonitis", @"Feline Leukemia", @"Giardia", @"Panleukopenia", @"Rabies", @"Rhinotracheitis", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,16 +39,6 @@
 {
     return true;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
@@ -101,7 +91,6 @@ numberOfRowsInComponent:(NSInteger)component{
 
     }
 }
-
 
 - (IBAction)pressedRecord:(id)sender {
     HealthRecord *newRecord = [[HealthRecord alloc] initWithPetName:[pickedPet name] vaccineName:pickedVaccine type:@"Vaccine" andDate:pickDate.date];

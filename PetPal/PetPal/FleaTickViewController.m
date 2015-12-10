@@ -25,8 +25,8 @@
     self.navigationItem.title = @"Add Treatment";
     thisZoo = [MyZoo sharedZoo];
     pickedPet = [thisZoo.myPets objectAtIndex:0];
-    fleaTickLabelsDog = [[NSArray alloc]initWithObjects:@"Canine Distemper", @"Measles", @"Parvovirus", @"Hepatitis", @"Rabies", @"CAV-2", @"Parainfluenza", @"Bordetella", @"Leptospirosis", @"Coronavirus", @"Lyme", nil];
-    fleaTickLabelsCat = [[NSArray alloc]initWithObjects:@"Panleukopenia", @"Rhinotracheitis", @"Calicivirus", @"Rabies", @"Feline Leukemia", @"Chlamydophila", @"Feline Infectious Peritonitis", @"Bordetella", @"Giardia", @"Feline Immunodeficiency Virus", nil];
+    fleaTickLabelsDog = [[NSArray alloc]initWithObjects:@"Activyl", @"Activyl Tick Plus", @"Advantage Multi", @"Bravecto", @"Comfortis", @"Fiproguard", @"Fiproguard Max", @"Flea5X Plus", @"Frontline Plus", @"Frontline Tritak", @"Heartgard", @"Heartgard Plus", @"Interceptor", @"Iverhart", @"Iverhart Max", @"K9 Advantix II", @"NexGard", @"Parastar", @"Parastar Plus", @"PetArmor", @"Sentinel", @"Sentinel Spectrum", @"Seresto", @"Trifexis", nil];
+    fleaTickLabelsCat = [[NSArray alloc]initWithObjects:@"Advantage II", @"Cheristin", @"EasySpot", @"Heartgard", @"Interceptor", @"Revolution", nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,16 +39,6 @@
 {
     return true;
 }
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;

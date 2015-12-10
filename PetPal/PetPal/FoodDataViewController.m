@@ -7,6 +7,7 @@
 //
 
 #import "FoodDataViewController.h"
+#import "MyFoodsTableViewController.h"
 #import <Parse/Parse.h>
 #import "FoodList.h"
 #import "FoodType.h"
@@ -60,16 +61,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)pressedAddToDatabase:(id)sender {
     
     PFObject *food = [PFObject objectWithClassName:@"food"];
@@ -114,7 +105,9 @@
     [[FoodList defaultFoodList] saveChanges];
 }
 
-- (IBAction)pressedUpdateinMyFood:(id)sender {
+- (IBAction)pressedManageMyFood:(id)sender {
+    MyFoodsTableViewController *mFTVC = [[MyFoodsTableViewController alloc]init];
+    [self.navigationController pushViewController:mFTVC animated:YES];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
