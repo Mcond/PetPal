@@ -56,6 +56,12 @@
 		0EEDF9F51C1525C900942444 /* FleaTickViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDF9F31C1525C900942444 /* FleaTickViewController.xib */; };
 		0EEDF9F91C1528F300942444 /* FleaTickTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEDF9F71C1528F300942444 /* FleaTickTableViewController.m */; };
 		0EEDF9FA1C1528F300942444 /* FleaTickTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EEDF9F81C1528F300942444 /* FleaTickTableViewController.xib */; };
+		DB4701BB1C195D22002D044B /* ContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4701B91C195D22002D044B /* ContactsViewController.m */; };
+		DB4701BC1C195D22002D044B /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4701BA1C195D22002D044B /* ContactsViewController.xib */; };
+		DB4701C21C1961B1002D044B /* ContactBook.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4701C11C1961B1002D044B /* ContactBook.m */; };
+		DB4701C51C196ADB002D044B /* MyContact.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4701C41C196ADB002D044B /* MyContact.m */; };
+		DB4701CA1C19C8AE002D044B /* ContactInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4701C81C19C8AE002D044B /* ContactInfoViewController.m */; };
+		DB4701CB1C19C8AE002D044B /* ContactInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB4701C91C19C8AE002D044B /* ContactInfoViewController.xib */; };
 		DB62D2661C0EA48400C1A847 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2651C0EA48400C1A847 /* main.m */; };
 		DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2681C0EA48400C1A847 /* AppDelegate.m */; };
 		DB62D26F1C0EA48400C1A847 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D26E1C0EA48400C1A847 /* ViewController.m */; };
@@ -153,6 +159,17 @@
 		0EEDF9F61C1528F300942444 /* FleaTickTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FleaTickTableViewController.h; sourceTree = "<group>"; };
 		0EEDF9F71C1528F300942444 /* FleaTickTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FleaTickTableViewController.m; sourceTree = "<group>"; };
 		0EEDF9F81C1528F300942444 /* FleaTickTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FleaTickTableViewController.xib; sourceTree = "<group>"; };
+		DB4701B81C195D22002D044B /* ContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactsViewController.h; sourceTree = "<group>"; };
+		DB4701B91C195D22002D044B /* ContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsViewController.m; sourceTree = "<group>"; };
+		DB4701BA1C195D22002D044B /* ContactsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		DB4701C01C1961B1002D044B /* ContactBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactBook.h; sourceTree = "<group>"; };
+		DB4701C11C1961B1002D044B /* ContactBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactBook.m; sourceTree = "<group>"; };
+		DB4701C31C196ADB002D044B /* MyContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyContact.h; sourceTree = "<group>"; };
+		DB4701C41C196ADB002D044B /* MyContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyContact.m; sourceTree = "<group>"; };
+		DB4701C61C1978E1002D044B /* PetPal 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PetPal 3.xcdatamodel"; sourceTree = "<group>"; };
+		DB4701C71C19C8AE002D044B /* ContactInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactInfoViewController.h; sourceTree = "<group>"; };
+		DB4701C81C19C8AE002D044B /* ContactInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactInfoViewController.m; sourceTree = "<group>"; };
+		DB4701C91C19C8AE002D044B /* ContactInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactInfoViewController.xib; sourceTree = "<group>"; };
 		DB62D2601C0EA48400C1A847 /* PetPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62D2641C0EA48400C1A847 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB62D2651C0EA48400C1A847 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -301,6 +318,23 @@
 			name = "Pet Tab";
 			sourceTree = "<group>";
 		};
+		DB4701B41C195C9F002D044B /* Contact Tab */ = {
+			isa = PBXGroup;
+			children = (
+				DB4701B81C195D22002D044B /* ContactsViewController.h */,
+				DB4701B91C195D22002D044B /* ContactsViewController.m */,
+				DB4701BA1C195D22002D044B /* ContactsViewController.xib */,
+				DB4701C01C1961B1002D044B /* ContactBook.h */,
+				DB4701C11C1961B1002D044B /* ContactBook.m */,
+				DB4701C31C196ADB002D044B /* MyContact.h */,
+				DB4701C41C196ADB002D044B /* MyContact.m */,
+				DB4701C71C19C8AE002D044B /* ContactInfoViewController.h */,
+				DB4701C81C19C8AE002D044B /* ContactInfoViewController.m */,
+				DB4701C91C19C8AE002D044B /* ContactInfoViewController.xib */,
+			);
+			name = "Contact Tab";
+			sourceTree = "<group>";
+		};
 		DB62D2571C0EA48300C1A847 = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +372,7 @@
 			children = (
 				DB62D2671C0EA48400C1A847 /* AppDelegate.h */,
 				DB62D2681C0EA48400C1A847 /* AppDelegate.m */,
+				DB4701B41C195C9F002D044B /* Contact Tab */,
 				0EEDF9ED1C14CC5300942444 /* Pet Tab */,
 				0ED7A19A1C14A4730088E6E7 /* Food Tab */,
 				DB62D26D1C0EA48400C1A847 /* ViewController.h */,
@@ -461,6 +496,7 @@
 				0ED7A1941C13A9C30088E6E7 /* HealthTabViewController.xib in Resources */,
 				0ED7A1811C1218900088E6E7 /* SearchFoodDatabaseViewController.xib in Resources */,
 				0ED7A1771C11FC7C0088E6E7 /* FoodDataViewController.xib in Resources */,
+				DB4701BC1C195D22002D044B /* ContactsViewController.xib in Resources */,
 				0EEDF9FA1C1528F300942444 /* FleaTickTableViewController.xib in Resources */,
 				0EEDF9F51C1525C900942444 /* FleaTickViewController.xib in Resources */,
 				0ED7A18E1C13895C0088E6E7 /* FoodTabViewController.xib in Resources */,
@@ -474,6 +510,7 @@
 				DBDF0A4B1C16AD9400035097 /* RemindersViewController.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
 				0ED7A1A31C14A9810088E6E7 /* VaccinesViewController.xib in Resources */,
+				DB4701CB1C19C8AE002D044B /* ContactInfoViewController.xib in Resources */,
 				0ED7A1861C1356DD0088E6E7 /* QueryResultsTableViewController.xib in Resources */,
 				0ED7A1AE1C14BCFA0088E6E7 /* VaccineTableViewController.xib in Resources */,
 			);
@@ -493,15 +530,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4701C51C196ADB002D044B /* MyContact.m in Sources */,
 				0ED7A1A91C14B47D0088E6E7 /* HealthLog.m in Sources */,
 				0ED7A1981C13ADA00088E6E7 /* EnterFoodGivenViewController.m in Sources */,
 				0ED7A18D1C13895C0088E6E7 /* FoodTabViewController.m in Sources */,
 				0ED7A1851C1356DD0088E6E7 /* QueryResultsTableViewController.m in Sources */,
 				DBDF0A431C16A0E300035097 /* Reminder.m in Sources */,
 				DBDF0A4A1C16AD9400035097 /* RemindersViewController.m in Sources */,
+				DB4701C21C1961B1002D044B /* ContactBook.m in Sources */,
 				0EEDF9DD1C14CB4300942444 /* DetailPetInfoViewController.m in Sources */,
 				0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */,
 				DBDF0A461C16A24A00035097 /* Calendar.m in Sources */,
+				DB4701CA1C19C8AE002D044B /* ContactInfoViewController.m in Sources */,
 				0ED7A1A61C14B45A0088E6E7 /* HealthRecord.m in Sources */,
 				0EEDF9F01C1523C500942444 /* FleaTickLog.m in Sources */,
 				DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */,
@@ -511,6 +551,7 @@
 				0EEDF9E81C14CC4900942444 /* MyPet.m in Sources */,
 				0EEDF9EA1C14CC4900942444 /* PetInfoViewController.m in Sources */,
 				0EEDF9E91C14CC4900942444 /* MyZoo.m in Sources */,
+				DB4701BB1C195D22002D044B /* ContactsViewController.m in Sources */,
 				0ED7A1891C136D3C0088E6E7 /* TableViewCellStyleValue2.m in Sources */,
 				0ED7A1AD1C14BCFA0088E6E7 /* VaccineTableViewController.m in Sources */,
 				0ED7A1761C11FC7C0088E6E7 /* FoodDataViewController.m in Sources */,
@@ -750,6 +791,7 @@
 		0EEDF9E61C14CC4900942444 /* PetPal.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				DB4701C61C1978E1002D044B /* PetPal 3.xcdatamodel */,
 				0EEDF9E71C14CC4900942444 /* PetPal.xcdatamodel */,
 			);
 			currentVersion = 0EEDF9E71C14CC4900942444 /* PetPal.xcdatamodel */;
