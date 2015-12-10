@@ -64,6 +64,12 @@
 		DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB62D2751C0EA48400C1A847 /* LaunchScreen.xib */; };
 		DB62D2831C0EA48400C1A847 /* PetPalTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62D2821C0EA48400C1A847 /* PetPalTests.m */; };
 		DBD25C791C154F2500CAE47F /* ImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = DBD25C781C154F2500CAE47F /* ImageTransformer.m */; };
+		DBDF0A431C16A0E300035097 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF0A421C16A0E300035097 /* Reminder.m */; };
+		DBDF0A461C16A24A00035097 /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF0A451C16A24A00035097 /* Calendar.m */; };
+		DBDF0A4A1C16AD9400035097 /* RemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF0A481C16AD9300035097 /* RemindersViewController.m */; };
+		DBDF0A4B1C16AD9400035097 /* RemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDF0A491C16AD9300035097 /* RemindersViewController.xib */; };
+		DBDF0A541C17988900035097 /* DetailRemindersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDF0A521C17988900035097 /* DetailRemindersViewController.m */; };
+		DBDF0A551C17988900035097 /* DetailRemindersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBDF0A531C17988900035097 /* DetailRemindersViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +168,16 @@
 		DB62D2821C0EA48400C1A847 /* PetPalTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetPalTests.m; sourceTree = "<group>"; };
 		DBD25C771C154F2500CAE47F /* ImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTransformer.h; sourceTree = "<group>"; };
 		DBD25C781C154F2500CAE47F /* ImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTransformer.m; sourceTree = "<group>"; };
+		DBDF0A411C16A0E300035097 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		DBDF0A421C16A0E300035097 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
+		DBDF0A441C16A24A00035097 /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
+		DBDF0A451C16A24A00035097 /* Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calendar.m; sourceTree = "<group>"; };
+		DBDF0A471C16AD9300035097 /* RemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemindersViewController.h; sourceTree = "<group>"; };
+		DBDF0A481C16AD9300035097 /* RemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemindersViewController.m; sourceTree = "<group>"; };
+		DBDF0A491C16AD9300035097 /* RemindersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemindersViewController.xib; sourceTree = "<group>"; };
+		DBDF0A511C17988900035097 /* DetailRemindersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailRemindersViewController.h; sourceTree = "<group>"; };
+		DBDF0A521C17988900035097 /* DetailRemindersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailRemindersViewController.m; sourceTree = "<group>"; };
+		DBDF0A531C17988900035097 /* DetailRemindersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailRemindersViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +246,16 @@
 		0ED7A19B1C14A4E30088E6E7 /* Health Tab */ = {
 			isa = PBXGroup;
 			children = (
+				DBDF0A411C16A0E300035097 /* Reminder.h */,
+				DBDF0A421C16A0E300035097 /* Reminder.m */,
+				DBDF0A441C16A24A00035097 /* Calendar.h */,
+				DBDF0A451C16A24A00035097 /* Calendar.m */,
+				DBDF0A471C16AD9300035097 /* RemindersViewController.h */,
+				DBDF0A481C16AD9300035097 /* RemindersViewController.m */,
+				DBDF0A491C16AD9300035097 /* RemindersViewController.xib */,
+				DBDF0A511C17988900035097 /* DetailRemindersViewController.h */,
+				DBDF0A521C17988900035097 /* DetailRemindersViewController.m */,
+				DBDF0A531C17988900035097 /* DetailRemindersViewController.xib */,
 				0ED7A1901C13A9C30088E6E7 /* HealthTabViewController.h */,
 				0ED7A1911C13A9C30088E6E7 /* HealthTabViewController.m */,
 				0ED7A1921C13A9C30088E6E7 /* HealthTabViewController.xib */,
@@ -441,9 +467,11 @@
 				0EEDF9EB1C14CC4900942444 /* PetInfoViewController.xib in Resources */,
 				0EEC97F11C15F4130000EB78 /* MyFoodsTableViewController.xib in Resources */,
 				0ED7A1991C13ADA00088E6E7 /* EnterFoodGivenViewController.xib in Resources */,
+				DBDF0A551C17988900035097 /* DetailRemindersViewController.xib in Resources */,
 				DB62D2721C0EA48400C1A847 /* Main.storyboard in Resources */,
 				DB62D2771C0EA48400C1A847 /* LaunchScreen.xib in Resources */,
 				0EEDF9DE1C14CB4300942444 /* DetailPetInfoViewController.xib in Resources */,
+				DBDF0A4B1C16AD9400035097 /* RemindersViewController.xib in Resources */,
 				DB62D2741C0EA48400C1A847 /* Images.xcassets in Resources */,
 				0ED7A1A31C14A9810088E6E7 /* VaccinesViewController.xib in Resources */,
 				0ED7A1861C1356DD0088E6E7 /* QueryResultsTableViewController.xib in Resources */,
@@ -469,8 +497,11 @@
 				0ED7A1981C13ADA00088E6E7 /* EnterFoodGivenViewController.m in Sources */,
 				0ED7A18D1C13895C0088E6E7 /* FoodTabViewController.m in Sources */,
 				0ED7A1851C1356DD0088E6E7 /* QueryResultsTableViewController.m in Sources */,
+				DBDF0A431C16A0E300035097 /* Reminder.m in Sources */,
+				DBDF0A4A1C16AD9400035097 /* RemindersViewController.m in Sources */,
 				0EEDF9DD1C14CB4300942444 /* DetailPetInfoViewController.m in Sources */,
 				0ED7A1781C11FC7C0088E6E7 /* FoodList.m in Sources */,
+				DBDF0A461C16A24A00035097 /* Calendar.m in Sources */,
 				0ED7A1A61C14B45A0088E6E7 /* HealthRecord.m in Sources */,
 				0EEDF9F01C1523C500942444 /* FleaTickLog.m in Sources */,
 				DB62D2691C0EA48400C1A847 /* AppDelegate.m in Sources */,
@@ -487,6 +518,7 @@
 				0EEC97F01C15F4130000EB78 /* MyFoodsTableViewController.m in Sources */,
 				0EEDF9F41C1525C900942444 /* FleaTickViewController.m in Sources */,
 				0EEDF9EC1C14CC4900942444 /* PetPal.xcdatamodeld in Sources */,
+				DBDF0A541C17988900035097 /* DetailRemindersViewController.m in Sources */,
 				DB62D26F1C0EA48400C1A847 /* ViewController.m in Sources */,
 				0ED7A1931C13A9C30088E6E7 /* HealthTabViewController.m in Sources */,
 				0ED7A1A21C14A9810088E6E7 /* VaccinesViewController.m in Sources */,

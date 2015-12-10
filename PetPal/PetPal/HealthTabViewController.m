@@ -9,6 +9,7 @@
 #import "HealthTabViewController.h"
 #import "VaccineTableViewController.h"
 #import "FleaTickTableViewController.h"
+#import "RemindersViewController.h"
 
 @interface HealthTabViewController ()
 
@@ -45,7 +46,11 @@
     return true;
 }
 
-- (IBAction)pressedReminders:(id)sender {
+- (IBAction)pressedReminders:(id)sender
+{
+    RemindersViewController *rVC = [[RemindersViewController alloc] initWithStyle: UITableViewStylePlain];
+    [self.navigationController pushViewController:rVC animated:YES];
+    
 }
 
 - (IBAction)pressedVaccines:(id)sender {

@@ -13,6 +13,7 @@
 #import "PetInfoViewController.h"
 #import "FoodTabViewController.h"
 #import "HealthTabViewController.h"
+#import "Calendar.h"
 
 @interface AppDelegate ()
 
@@ -58,7 +59,17 @@
     BOOL success = [[MyZoo sharedZoo] saveChanges];
     if (success)
     {
-        NSLog(@"Saved");
+        NSLog(@"MyZoo Saved");
+    }
+    else
+    {
+        NSLog(@"Not Saved");
+    }
+    
+    success = [[Calendar sharedCalendar] saveChanges];
+    if (success)
+    {
+        NSLog(@"MyZoo Saved");
     }
     else
     {
