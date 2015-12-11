@@ -7,40 +7,59 @@
 //
 
 #import "FoodDataViewController.h"
+#import "MyFoodsTableViewController.h"
 #import <Parse/Parse.h>
 #import "FoodList.h"
+#import "FoodType.h"
 
 @interface FoodDataViewController ()
 
 @end
 
 @implementation FoodDataViewController
-@synthesize brandName, FlavorName, caloriesPerServing, servingSize, univPriceCode, ServingUnit, myFoodList, pickedServingUnit, sizeLables, typeLables, foodType, pickedType;
+@synthesize brandName, FlavorName, caloriesPerServing, servingSize, univPriceCode, ServingUnit, myFoodList, pickedServingUnit, sizeLables, typeLables, foodType, pickedType, importedFood;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.title = @"Add Food";
     // Do any additional setup after loading the view from its nib.
     sizeLables = [[NSArray alloc] initWithObjects:@"cups", @"ounces", @"grams", @"pieces", @"pounds", nil];
     typeLables = [[NSArray alloc] initWithObjects:@"Cat", @"Dog", nil];
-    pickedServingUnit = [sizeLables objectAtIndex:0];
-    pickedType = [typeLables objectAtIndex:0];
+
     myFoodList = [FoodList defaultFoodList];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if (importedFood != nil) {
+        brandName.text = [importedFood objectForKey:@"brandName"];
+        FlavorName.text = [importedFood objectForKey:@"flavorName"];
+        servingSize.text = [importedFood objectForKey:@"servingSize"];
+        univPriceCode.text = [importedFood objectForKey:@"uPC"];
+        caloriesPerServing.text = [importedFood objectForKey:@"caolriesPerServing"];
+        pickedServingUnit = [importedFood objectForKey:@"servingUnit"];
+        pickedType = [importedFood objectForKey:@"type"];
+        NSUInteger row = [sizeLables indexOfObject:[importedFood objectForKey:@"servingUnit"]];
+        [ServingUnit selectRow:row inComponent:0 animated:YES];
+        row = [typeLables indexOfObject:[importedFood objectForKey:@"type"]];
+        [foodType selectRow:row inComponent:0 animated:YES];
+    }
+    else
+    {
+        pickedServingUnit = [sizeLables objectAtIndex:0];
+        pickedType = [typeLables objectAtIndex:0];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [[FoodList defaultFoodList] saveChanges];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)pressedAddToDatabase:(id)sender {
     
@@ -77,18 +96,18 @@
 }
 
 - (IBAction)pressedAddToMyFood:(id)sender {
-    PFObject *food = [PFObject objectWithClassName:@"food"];
-    food[@"type"] = pickedType;
-    food[@"brandName"] = [brandName text];
-    food[@"flavorName"] = [FlavorName text];
-    food[@"servingSize"] = [servingSize text];
-    food[@"caolriesPerServing"] = [caloriesPerServing text];
-    food[@"uPC"] = [univPriceCode text];
-    food[@"servingUnit"] = pickedServingUnit;
+    FoodType *food = [[FoodType alloc]init];
+    food.foodName = [NSString stringWithFormat:@"%@ - %@",[brandName text], [FlavorName text]];
+    food.servingSize = [servingSize text];
+    food.calPerServig = [caloriesPerServing text];
+    food.servingUnit = pickedServingUnit;
     [myFoodList addFoodType:food];
+    [[FoodList defaultFoodList] saveChanges];
 }
 
-- (IBAction)pressedUpdateinMyFood:(id)sender {
+- (IBAction)pressedManageMyFood:(id)sender {
+    MyFoodsTableViewController *mFTVC = [[MyFoodsTableViewController alloc]init];
+    [self.navigationController pushViewController:mFTVC animated:YES];
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

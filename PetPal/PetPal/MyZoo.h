@@ -11,14 +11,16 @@
 
 @interface MyZoo : NSObject
 
-@property (nonatomic, copy) NSMutableArray *myPets;
+@property (nonatomic) NSMutableArray *myPets;
 @property (nonatomic, strong) NSManagedObjectContext *context;
 @property (nonatomic, strong) NSManagedObjectModel *model;
 
 +(instancetype) sharedZoo;
--(MyPet *) addPetWithName: (NSString *) theName breed: (NSString *) theBreed birthDate: (NSDate *) theBirthDate weight: (NSNumber *) theWeight andTargetCalories: (NSNumber *) targetCalories;
+-(MyPet *) addPetWithName: (NSString *) theName birthDate: (NSDate *) theBirthDate weight: (float) theWeight breed: (NSString *) theBreed type: (NSString*) theType looseWeight: (BOOL) looseWeight obeseProne: (BOOL) obeseProne andNeutered: (BOOL) neutered;
+
 -(void) removePet: (MyPet *) aPet;
 -(NSString *) archivePath;
 -(BOOL) saveChanges;
+-(NSInteger) allPets;
 
 @end

@@ -9,6 +9,12 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "FoodDataViewController.h"
+#import "SearchFoodDatabaseViewController.h"
+#import "PetInfoViewController.h"
+#import "FoodTabViewController.h"
+#import "HealthTabViewController.h"
+#import "Calendar.h"
+#import "ContactsViewController.h"
 
 @interface AppDelegate ()
 
@@ -30,14 +36,59 @@
     
     
     self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
-    FoodDataViewController *foodDataVC = [[FoodDataViewController alloc] init];
-    self.window.rootViewController = foodDataVC;
+    HealthTabViewController *hTVC = [[HealthTabViewController alloc]init];
+    FoodTabViewController *fTVC = [[FoodTabViewController alloc]init];
+    PetInfoViewController *pIVC = [[PetInfoViewController alloc]initWithStyle:UITableViewStylePlain];
+    ContactsViewController *cIVC = [[ContactsViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *petInfoVC = [[UINavigationController alloc]initWithRootViewController:pIVC];
+    petInfoVC.tabBarItem.title = @"Pet Info";
+    UINavigationController *foodVC = [[UINavigationController alloc]initWithRootViewController:fTVC];
+    foodVC.tabBarItem.title = @"Food";
+    UINavigationController *healthVC = [[UINavigationController alloc]initWithRootViewController:hTVC];
+    healthVC.tabBarItem.title = @"Health";
+    UINavigationController *contactsVC =[[UINavigationController alloc] initWithRootViewController:cIVC];
+    contactsVC.tabBarItem.title = @"Contacts";
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    //assign sub views to tab bar controller and set as root
+    tabBarController.viewControllers = @[petInfoVC, foodVC, healthVC, contactsVC];
+    self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    BOOL success = [[MyZoo sharedZoo] saveChanges];
+    if (success)
+    {
+        NSLog(@"MyZoo Saved");
+    }
+    else
+    {
+        NSLog(@"Not Saved");
+    }
+    
+    success = [[Calendar sharedCalendar] saveChanges];
+    if (success)
+    {
+        NSLog(@"MyZoo Saved");
+    }
+    else
+    {
+        NSLog(@"Not Saved");
+    }
+    success = [[ContactBook sharedContacts] saveChanges];
+    if (success)
+    {
+        NSLog(@"ContactBook Saved");
+    }
+    else
+    {
+        NSLog(@"ContactBook Not Saved");
+    }
+    
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }

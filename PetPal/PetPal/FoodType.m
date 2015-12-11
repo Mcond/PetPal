@@ -10,6 +10,6 @@
 
 @implementation FoodType
 
-@synthesize servingSize, servingUnit, calPerServig, flavorName, brandName;
+@synthesize servingSize, servingUnit, calPerServig, foodName;
 
 @end

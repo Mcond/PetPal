@@ -10,8 +10,8 @@
 
 @interface FoodType : NSObject
 
-@property (strong, nonatomic) NSString *brandName, *flavorName, *servingUnit;
-@property NSInteger calPerServig, uPC, servingSize;
+@property (strong, nonatomic) NSString *foodName, *servingUnit, *calPerServig, *servingSize;
+
 
 
 @end
