@@ -23,7 +23,7 @@
     self.navigationItem.title = @"Reminders";
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target: self action: @selector (addNewReminder:)];
     self.navigationItem.rightBarButtonItem = add;
-
+    self.tableView.rowHeight = 100;
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -61,6 +61,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     Reminder *aReminder = [Calendar sharedCalendar].myReminders[indexPath.row];
     cell.textLabel.text = [aReminder description];
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:32];
     return cell;
 }
 
