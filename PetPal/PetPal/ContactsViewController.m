@@ -25,6 +25,8 @@
     //Create an add button and associate the method addContact to it
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target: self action: @selector (addContact:)];
     self.navigationItem.rightBarButtonItem = add;
+    self.tableView.rowHeight = 100;
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -94,6 +96,7 @@
     
     // Configure the cell...
     
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
     return cell;
 }
 
