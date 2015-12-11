@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DA0B2FA8-EFD6-4A52-A4D5-3668E37C48ED</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>PetPal</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>41F36B049000A96EE54579BF1E22FEAC563C4E36</key>
 		<string>https://github.com/Mcond/PetPal</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PetPal/PetPal.xcodeproj/project.xcworkspace</string>
+	<string>PetPal/PetPal.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>41F36B049000A96EE54579BF1E22FEAC563C4E36</key>

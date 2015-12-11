@@ -24,6 +24,7 @@
     self.navigationItem.title = @"My Pets";
     UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemAdd target: self action: @selector (addNewPet:)];
     self.navigationItem.rightBarButtonItem = add;
+    self.tableView.rowHeight = 100;
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -65,7 +66,7 @@
     cell.textLabel.text = pet.name;
     
     // Configure the cell...
-    
+    cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:32];
     return cell;
 }
 
