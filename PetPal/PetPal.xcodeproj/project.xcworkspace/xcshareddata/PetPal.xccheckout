@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>41F36B049000A96EE54579BF1E22FEAC563C4E36</key>
-		<string>https://github.com/Mcond/PetPal.git</string>
+		<string>https://github.com/Mcond/PetPal</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PetPal/PetPal.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Mcond/PetPal.git</string>
+	<string>https://github.com/Mcond/PetPal</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
